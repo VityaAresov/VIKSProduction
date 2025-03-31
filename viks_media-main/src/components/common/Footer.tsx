@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaFacebookF, XIcon, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaX, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
 import styles from './Footer.module.css'; 
