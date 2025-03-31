@@ -32,7 +32,7 @@ const description = 'We offers a comprehensive suite of digital marketing servic
 
 const socialLinksData: SocialLinkItem[] = [
     { id: 'fb', href: 'https://www.facebook.com/profile.php?id=61571812801984&mibextid=wwXIfr&mibextid=wwXIfr', label: 'Facebook', icon: FaFacebookF },
-    { id: 'tw', href: '#', label: 'Twitter', icon: FaTwitter },
+    { id: 'tw', href: '#', label: 'X', icon: XIcon },
     { id: 'li', href: 'https://www.linkedin.com/company/viks-production-ai/', label: 'LinkedIn', icon: FaLinkedinIn },
     { id: 'in', href: 'https://www.instagram.com/viks_production/', label: 'Instagram', icon: FaInstagram },
 ];
