@@ -54,7 +54,7 @@ const licenceLinks: FooterLinkItem[] = [
 const contactDetails: ContactDetailItem[] = [
     { id: 'con1', href: 'tel:+19547745305', text: '(954) 774-5305', icon: FiPhone },
     { id: 'con2', href: 'mailto:info@viksproduction.com', text: 'info@viksproduction.com', icon: FiMail },
-    { id: 'con3', text: '2972 Westheimer Rd. Santa Ana, Illinois 85486', icon: FiMapPin },
+    { id: 'con3', text: 'San Jose, California', icon: FiMapPin },
 ];
 
 
@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <p>&copy; {new Date().getFullYear()} VIKS Production. All Rights Reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} VIKS Production LLC. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
