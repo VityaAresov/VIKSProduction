@@ -31,10 +31,10 @@ const logoUrl = '/images/logo.png';
 const description = 'We offers a comprehensive suite of digital marketing services that cover all aspects of our online presence. From SEO and social media marketing to content creation and PPC advertising, they have the expertise and resources to handle our diverse marketing needs.';
 
 const socialLinksData: SocialLinkItem[] = [
-    { id: 'fb', href: '#', label: 'Facebook', icon: FaFacebookF },
+    { id: 'fb', href: 'https://www.facebook.com/profile.php?id=61571812801984&mibextid=wwXIfr&mibextid=wwXIfr', label: 'Facebook', icon: FaFacebookF },
     { id: 'tw', href: '#', label: 'Twitter', icon: FaTwitter },
-    { id: 'li', href: '#', label: 'LinkedIn', icon: FaLinkedinIn },
-    { id: 'in', href: '#', label: 'Instagram', icon: FaInstagram },
+    { id: 'li', href: 'https://www.linkedin.com/company/viks-production-ai/', label: 'LinkedIn', icon: FaLinkedinIn },
+    { id: 'in', href: 'https://www.instagram.com/viks_production/', label: 'Instagram', icon: FaInstagram },
 ];
 
 const navigationLinks: FooterLinkItem[] = [
