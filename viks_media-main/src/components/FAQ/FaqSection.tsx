@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import FaqItem from './FaqItem'; 
-import styles from './FaqSection.module.css'; 
+import FaqItem from './FaqItem';
+import styles from './FaqSection.module.css';
+import Link from "next/link";
 
 
 interface FaqData {
@@ -30,18 +31,18 @@ const faqData: FaqData[] = [
         question: 'How do you measure the success of digital marketing campaigns?',
         answer: 'Success is measured using various Key Performance Indicators (KPIs) relevant to the campaign goals, such as website traffic, conversion rates, lead generation, cost per acquisition (CPA), return on investment (ROI), engagement metrics (likes, shares, comments), and brand awareness.',
     },
-    
+
 ];
 
 
 const FaqSection: React.FC = () => {
-    
-    
+
+
     const [openItemId, setOpenItemId] = useState<string | null>(faqData.length > 0 ? faqData[0].id : null);
 
-    
+
     const handleToggle = (id: string) => {
-        setOpenItemId(prevId => (prevId === id ? null : id)); 
+        setOpenItemId(prevId => (prevId === id ? null : id));
     };
 
     return (
@@ -60,12 +61,10 @@ const FaqSection: React.FC = () => {
                     </div>
                     <div className={styles.moreQuestionsBlock}>
                         <p className={styles.moreQuestionsText}>Have more questions?</p>
-                        {}
-                        <a href="/contact" className={styles.contactButton}> {}
-                            {}
+                        {/* This is the line causing the error (around line 64) */}
+                        <Link href="/contact" className={styles.contactButton}>
                             <span>Contact Us</span>
-                            {}
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -79,8 +78,8 @@ const FaqSection: React.FC = () => {
                                 id={faq.id}
                                 question={faq.question}
                                 answer={faq.answer}
-                                isOpen={openItemId === faq.id} 
-                                onToggle={handleToggle} 
+                                isOpen={openItemId === faq.id}
+                                onToggle={handleToggle}
                             />
                         ))}
                     </div>
