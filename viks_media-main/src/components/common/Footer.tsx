@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { FaFacebookF, FaX, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
 import styles from './Footer.module.css'; 
@@ -32,7 +33,7 @@ const description = 'We offers a comprehensive suite of digital marketing servic
 
 const socialLinksData: SocialLinkItem[] = [
     { id: 'fb', href: 'https://www.facebook.com/profile.php?id=61571812801984&mibextid=wwXIfr&mibextid=wwXIfr', label: 'Facebook', icon: FaFacebookF },
-    { id: 'x', href: 'https://x.com/', label: 'X', icon: FaX },
+    { id: 'x', href: 'https://x.com/', label: 'X', icon: FaXTwitter },
     { id: 'li', href: 'https://www.linkedin.com/company/viks-production-ai/', label: 'LinkedIn', icon: FaLinkedinIn },
     { id: 'in', href: 'https://www.instagram.com/viks_production/', label: 'Instagram', icon: FaInstagram },
 ];
