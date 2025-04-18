@@ -14,13 +14,13 @@ export const Frame = (): JSX.Element => {
         <div className={styles.frame}>
             <div className={styles.divWrapper}> {}
                 <h1 className={styles.textWrapper}> {}
-                    Stay ahead of the curve with our forward-thinking
+                    Create bold content that moves brands forward
                 </h1>
             </div>
 
             <p className={styles.description}> {}
-                An award-winning SEO agency with disciplines in digital marketing,
-                design, and website development. focused on understanding you.
+                We’re a creative content agency combining video production, AI-powered storytelling, 
+marketing, and web development to help startups and businesses grow smarter and faster.
             </p>
 
             <div className={styles.actionsWrapper}>
