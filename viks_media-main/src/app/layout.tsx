@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             transformOrigin: 'top left',
             width: '111.1111%',
             margin: '0 auto',
-            marginBottom: '-532px'
+            marginBottom: '-512px'
           }}
         >
           <main className="flex-grow container mx-auto px-6 py-8">
