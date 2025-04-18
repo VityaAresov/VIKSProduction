@@ -1,0 +1,224 @@
+
+
+.footerSection {
+    background-color: #FAFAFA; 
+    padding: 80px 0 40px 0; 
+    border-top: 1px solid #f0f0f0; 
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1296px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+    gap: 108px; 
+    flex-wrap: wrap; 
+    margin-bottom: 40px; 
+}
+
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px; 
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 534px; 
+}
+
+.logo {
+    width: 72px;
+    height: 47px;
+    object-fit: contain; 
+}
+
+.description {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px; 
+    color: #9B9B9C; 
+    margin: 0;
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px; 
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    background: #F3F3F3; 
+    border-radius: 50%; 
+    color: #192031; 
+    font-size: 16px; 
+    transition: opacity 0.2s ease;
+}
+
+.socialLink:hover {
+    opacity: 0.7;
+}
+
+
+.rightColumns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 115px; 
+    flex: 2; 
+    flex-wrap: wrap; 
+}
+
+.linkList,
+.contactList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px; 
+    min-width: 120px; 
+    flex: 1; 
+}
+
+.listTitle {
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #192031; 
+    margin: 0 0 24px 0; 
+}
+
+.linkList ul,
+.contactList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.footerLink,
+.contactLink {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #9B9B9C; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footerLink:hover,
+.contactLink:hover {
+    color: #192031; 
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start; 
+    gap: 10px; 
+    color: #9B9B9C; 
+    font-size: 14px; 
+    line-height: 19px;
+}
+
+.contactIcon {
+    width: 16px; 
+    height: 16px;
+    margin-top: 2px; 
+    color: #9B9B9C; 
+    flex-shrink: 0;
+}
+
+
+.footerBottom {
+    margin-top: 40px; 
+    padding-top: 20px; 
+    border-top: 1px solid #f0f0f0; 
+    text-align: center; 
+}
+
+.footerBottom p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #9B9B9C;
+    margin: 0;
+}
+
+
+@media (max-width: 992px) {
+    .footerContent {
+        gap: 60px; 
+    }
+    .rightColumns {
+        gap: 60px; 
+    }
+    .listTitle {
+        margin-bottom: 15px;
+    }
+    .linkList ul, .contactList ul {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 40px;
+    }
+    .leftColumn {
+        align-items: center; 
+        max-width: 100%;
+        min-width: auto;
+    }
+    .rightColumns {
+        width: 100%;
+        justify-content: space-around; 
+        gap: 40px; 
+        text-align: left; 
+    }
+    .linkList, .contactList {
+        align-items: flex-start; 
+        min-width: 150px; 
+        flex-basis: auto; 
+    }
+    .contactItem {
+        align-items: center; 
+    }
+    .footerBottom p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerSection { padding: 60px 0 30px 0; }
+    .rightColumns {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 30px;
+    }
+    .linkList, .contactList {
+        align-items: center; 
+        width: 100%;
+        min-width: auto;
+    }
+}

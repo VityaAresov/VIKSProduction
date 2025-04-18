@@ -1,0 +1,198 @@
+/* Overall container for the component */
+.pageContainer {
+    padding: 1rem; /* Minimal padding */
+    /* Updated Font Family - applied here as a 'global' font for the component */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: #333;
+}
+
+/* Grid layout for two columns */
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+}
+
+/* Left column specific styles */
+.leftColumn {
+    /* Add specific padding if needed */
+}
+
+.heading {
+    color: #010205;
+
+    font-family: "Evolventa", Helvetica, sans-serif;
+    font-size: clamp(40px, 6vw, 60px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+
+    max-width: 100%;
+}
+
+.paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Styles for the contact info section */
+.contactInfo {
+    margin-top: 2rem;
+}
+
+/* Style for each line containing an icon and text */
+.contactLine {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+/* Style for the icons themselves */
+.contactIcon {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #444;
+    flex-shrink: 0;
+}
+
+/* Style for the checkmark (only needed if using the checkmark option) */
+/* .checkIcon { ... } */
+
+
+/* Right column specific styles */
+.rightColumn {
+    /* Add specific padding if needed */
+}
+
+/* Form styles */
+.form {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Row for side-by-side fields */
+.formRow {
+    display: flex;
+    gap: 1rem;
+}
+
+.formRow .formGroup {
+    flex: 1;
+}
+
+.formGroup {
+    /* Container for label + input */
+}
+
+.label {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.input,
+.select,
+.textarea {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Font will be inherited from .pageContainer */
+}
+
+.select {
+    font-family: 'Open Sans', sans-serif;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23333" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.8em;
+    padding-right: 2.5rem;
+    background-color: white;
+}
+
+.textarea {
+    font-family: 'Open Sans', sans-serif;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.recaptchaNotice {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.recaptchaNotice a {
+    color: #007bff;
+    text-decoration: none;
+}
+.recaptchaNotice a:hover {
+    text-decoration: underline;
+}
+
+.submitButton {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.9rem 1.8rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+    /* Font will be inherited */
+}
+
+.submitButton:hover {
+    background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .submitButton {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}
