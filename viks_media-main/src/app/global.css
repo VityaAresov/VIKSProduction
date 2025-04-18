@@ -26,18 +26,43 @@
 /* ====================================== */
 
 html {
-    /* Prevent horizontal scrollbar possibly caused by body width > 100% */
+    /* Prevent horizontal scrollbar possibly caused by body/wrapper width > 100% */
     overflow-x: hidden;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     color: #020407; /* Основной цвет текста */
-    margin: 0;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем паддинги по умолчанию */
     background-color: #ffffff; /* Явно задаем фон */
     -webkit-font-smoothing: antialiased; /* Улучшение рендеринга шрифтов */
     -moz-osx-font-smoothing: grayscale;
+
+    /* === GLOBAL SCALING STYLES REMOVED FROM BODY === */
+    /* transform: scale(0.9); */
+    /* transform-origin: top left; */
+    /* width: 111.1111%; */
+    /* ==================================================== */
+
+    /* Ensure body takes at least viewport height if needed */
+    /* Это полезно, если фон body должен быть виден при коротком контенте */
+    min-height: 100vh;
+
+    /* Дополнительно можно скрыть overflow на body на всякий случай */
+    /* overflow: hidden; */ /* Может помешать нормальной прокрутке, если wrapper длинный. overflow-x: hidden на html обычно достаточно. */
 }
+
+/* === WRAPPER FOR SCALING === */
+#page-wrapper {
+    transform: scale(0.9);
+    transform-origin: top left; /* or 0 0 */
+    width: 111.1111%; /* Compensates width for scale(0.9) */
+    background-color: inherit; /* Наследуем фон от body */
+    /* Высота wrapper'а будет определяться его контентом */
+    /* НЕ ДОБАВЛЯЙТЕ min-height: 100vh СЮДА, это вернет проблему */
+}
+/* ============================ */
 
 a {
     color: inherit; /* Наследует цвет от родителя */
@@ -102,6 +127,12 @@ a {
 /* === react-responsive-modal ========== */
 /* ====================================== */
 
+/* Стили для модального окна остаются без изменений, но учтите, */
+/* что глобальное масштабирование wrapper'а МОЖЕТ повлиять на */
+/* визуальный размер и позиционирование модального окна. */
+/* Возможно, потребуется контр-масштабирование модалки, если она */
+/* выглядит слишком маленькой (как закомментировано ниже). */
+
 .react-responsive-modal-overlay {
     background: rgba(0, 0, 0, 0.8) !important; /* Сделал чуть темнее */
     padding: 15px !important;
@@ -116,30 +147,30 @@ a {
     vertical-align: middle;
     width: auto !important;
     /* --- НАСТРОЙКА РАЗМЕРА МОДАЛКИ --- */
-    max-width: 95vw !important;  /* <-- Увеличено, чтобы окно было больше */
-    max-height: 90vh !important; /* <-- Увеличено, чтобы окно было больше */
+    max-width: 95vw !important;
+    max-height: 90vh !important;
     /* -------------------------------- */
     margin: 20px auto !important; /* Добавил вертикальный отступ */
     padding: 0 !important;
     background: transparent !important; /* Фон задается .modalLayout внутри */
-    box-shadow: 0 5px 25px rgba(0,0,0,0.3) !important; /* Можно добавить тень сюда */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3) !important;
     border-radius: 8px !important;
-    overflow: hidden !important; /* Обязательно для скругления */
+    overflow: hidden !important;
     position: relative !important;
     text-align: left !important;
-    z-index: 1001 !important; /* Выше оверлея */
+    z-index: 1001 !important;
 
-    /* Note: Global body scaling might affect modal positioning/size */
-    /* transform: scale(calc(1 / 0.9)); */ /* Example: Counter-scale modal if needed */
+    /* Optional: Counter-scale modal if it appears too small due to wrapper scaling */
+    /* transform: scale(calc(1 / 0.9)); */
     /* transform-origin: center center; */
 }
 
 .react-responsive-modal-closeButton {
     position: absolute !important;
-    top: 14px !important; /* Немного подвинул */
+    top: 14px !important;
     right: 14px !important;
-    z-index: 10 !important; /* Выше контента модалки */
-    background: rgba(30, 30, 30, 0.6) !important; /* Фон кнопки */
+    z-index: 10 !important;
+    background: rgba(30, 30, 30, 0.6) !important;
     border-radius: 50% !important;
     padding: 6px !important;
     transition: background 0.2s ease, transform 0.2s ease !important;
@@ -148,19 +179,19 @@ a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    line-height: 0; /* Убирает лишнюю высоту */
+    line-height: 0;
 }
 
 .react-responsive-modal-closeButton svg {
-    fill: #ffffff !important; /* Цвет крестика */
+    fill: #ffffff !important;
     height: 18px !important;
     width: 18px !important;
     display: block !important;
 }
 
 .react-responsive-modal-closeButton:hover {
-    background: rgba(0, 0, 0, 0.8) !important; /* Темнее при наведении */
-    transform: scale(1.1); /* Легкое увеличение */
+    background: rgba(0, 0, 0, 0.8) !important;
+    transform: scale(1.1); /* Это масштабирование кнопки остаётся */
 }
 
 /* --- Адаптивные стили для модалки --- */
@@ -168,9 +199,7 @@ a {
 
 @media (max-width: 768px) {
     .react-responsive-modal-modal {
-        /* max-width/max-height уже заданы в %, они адаптивны */
-        /* Можно добавить специфичные правила, если нужно */
-        margin: 15px auto !important; /* Уменьшил вертикальный отступ */
+        margin: 15px auto !important;
     }
 }
 
@@ -185,7 +214,7 @@ a {
         width: 16px !important;
     }
     .react-responsive-modal-modal {
-        margin: 10px auto !important; /* Еще уменьшил отступ */
+        margin: 10px auto !important;
     }
 }
 
