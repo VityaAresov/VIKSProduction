@@ -37,19 +37,6 @@ body {
     background-color: #ffffff; /* Явно задаем фон */
     -webkit-font-smoothing: antialiased; /* Улучшение рендеринга шрифтов */
     -moz-osx-font-smoothing: grayscale;
-
-    /* === GLOBAL SCALING STYLES (APPLIES TO ENTIRE APP) === */
-    transform: scale(0.9);
-    transform-origin: top left; /* or 0 0 */
-    width: 111.1111%; /* Compensates width for scale(0.9) */
-    /* Ensure body takes at least viewport height if needed after scaling */
-    min-height: 100vh;
-    /* Prevent horizontal scrollbar due to width > 100% */
-    /* overflow-x: hidden; */ /* Moved to html for better effect */
-    /* ==================================================== */
-
-    /* Note: Global scaling can affect fixed positioning, viewport units, */
-    /* and potentially cause blurriness. Use with caution. */
 }
 
 a {
