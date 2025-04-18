@@ -18,11 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         */}
         <div
           style={{
-            transform: 'scale(0.9)',
-            transformOrigin: 'top left',
-            width: '111.1111%',
-            margin: '0 auto',
-            marginBottom: '-512px'
+            zoom: 0.9;
           }}
         >
           <main className="flex-grow container mx-auto px-6 py-8">
