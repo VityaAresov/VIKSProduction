@@ -1,0 +1,153 @@
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 38px;
+
+    position: relative;
+    width: 100%;
+    max-width: 682px;
+    padding: 20px 0;
+}
+
+
+.divWrapper {
+
+
+    width: 100%;
+}
+
+
+.textWrapper {
+    color: #010205;
+
+    font-family: "Evolventa", Helvetica, sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+
+    max-width: 100%;
+}
+
+
+.description {
+    color: #7e8387;
+
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.6;
+    position: relative;
+    width: 100%;
+
+    max-width: 557px;
+}
+
+
+.actionsWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    position: relative;
+}
+
+
+.scheduleButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #010205;
+    border-radius: 70px;
+    padding: 16px 32px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.scheduleButton:hover {
+    background-color: #333;
+}
+
+
+.scheduleButtonContent {
+    display: inline-flex;
+    align-items: center;
+
+    position: relative;
+}
+
+
+.scheduleButtonText {
+    color: #ffffff;
+
+    font-family: "Plus Jakarta Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+
+    position: relative;
+    white-space: nowrap;
+
+}
+
+
+.arrowRight {
+
+    position: relative;
+    display: block;
+}
+
+
+.caseStudyLink {
+    color: #010205;
+
+    font-family: "Plus Jakarta Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.8;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.caseStudyLink:hover {
+    color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .frame {
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .textWrapper {
+
+    }
+
+    .description {
+        max-width: 90%;
+    }
+
+    .actionsWrapper {
+        justify-content: center;
+        gap: 16px;
+    }
+}
