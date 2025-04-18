@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 80px; /* Horizontal padding for desktop */
-    height: 90px; /* Header height for desktop */
+    height: 70px; /* Header height for desktop */
     background-color: #fff;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     position: sticky; /* Stick to top */
@@ -258,7 +258,7 @@
     /* Adjust header for mobile */
     .header {
         padding: 0 20px; /* Less horizontal padding */
-        height: 80px; /* Reduced height */
+        height: 60px; /* Reduced height */
     }
 
     /* Adjust gap in left section */
