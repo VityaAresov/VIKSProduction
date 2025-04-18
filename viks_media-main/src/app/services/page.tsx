@@ -278,64 +278,6 @@ const ServicePage: React.FC = () => {
 
             </section>
 
-            {/* --- Footer --- */}
-            <footer className={styles.footerSection}>
-                <div className={styles.footerContainer}>
-                    <div className={styles.footerAbout}>
-                        {/* Add Logo here if needed */}
-                        {/* <Image src="/path/to/logo.png" alt="Logo" width={72} height={...} className={styles.footerLogo} /> */}
-                        <p className={styles.footerDescription}>
-                            Placeholder footer description text. Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                        </p>
-                        <div className={styles.footerSocialLinks}>
-                            <a href="#" className={styles.footerSocialLink} aria-label="Facebook"><i className="iconPlaceholder">F</i></a> {/* Replace F with actual icon */}
-                            <a href="#" className={styles.footerSocialLink} aria-label="Twitter"><i className="iconPlaceholder">T</i></a> {/* Replace T with actual icon */}
-                            <a href="#" className={styles.footerSocialLink} aria-label="Instagram"><i className="iconPlaceholder">I</i></a> {/* Replace I with actual icon */}
-                        </div>
-                    </div>
-                    <div className={styles.footerNavContainer}>
-                        <div className={styles.footerNavGroup}>
-                            <h4 className={styles.footerNavTitle}>Company</h4>
-                            <ul className={styles.footerNavList}>
-                                <li><a href="#" className={styles.footerNavLink}>About Us</a></li>
-                                <li><a href="#" className={styles.footerNavLink}>Services</a></li>
-                                <li><a href="#" className={styles.footerNavLink}>Portfolio</a></li>
-                                <li><a href="#" className={styles.footerNavLink}>Contact</a></li>
-                            </ul>
-                        </div>
-                        <div className={styles.footerNavGroup}>
-                            <h4 className={styles.footerNavTitle}>Support</h4>
-                            <ul className={styles.footerNavList}>
-                                <li><a href="#" className={styles.footerNavLink}>FAQ</a></li>
-                                <li><a href="#" className={styles.footerNavLink}>Help Center</a></li>
-                                <li><a href="#" className={styles.footerNavLink}>Terms of Service</a></li>
-                                <li><a href="#" className={styles.footerNavLink}>Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                        <div className={styles.footerNavGroup}>
-                            <h4 className={styles.footerNavTitle}>Contact Us</h4>
-                            <ul className={styles.footerContactList}>
-                                <li className={styles.footerContactItem}>
-                                    {/* <i className="iconPlaceholder"></i>  Icon */}
-                                    <span className={styles.footerNavLink}>123 Main St, Anytown, USA</span></li>
-                                <li className={styles.footerContactItem}>
-                                    {/* <i className="iconPlaceholder"></i> Icon */}
-                                    <a href="tel:+1234567890" className={styles.footerNavLink}>+1 (234) 567-890</a>
-                                </li>
-                                <li className={styles.footerContactItem}>
-                                    {/* <i className="iconPlaceholder"></i> Icon */}
-                                    <a href="mailto:info@example.com" className={styles.footerNavLink}>info@example.com</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.footerCopyright}>
-                    &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
-                </div>
-            </footer>
-            {/* --- End Footer --- */}
-
         </div>
     );
 };
