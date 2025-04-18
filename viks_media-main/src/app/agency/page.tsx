@@ -42,6 +42,7 @@ interface TeamMember {
         linkedin?: string;
         twitter?: string;
         dribbble?: string;
+        instagram?: string;
     };
 }
 
