@@ -53,7 +53,7 @@ body {
     /* overflow: hidden; */ /* Может помешать нормальной прокрутке, если wrapper длинный. overflow-x: hidden на html обычно достаточно. */
 }
 
-/* === WRAPPER FOR SCALING === */
+/* === WRAPPER FOR SCALING */
 #page-wrapper {
     transform: scale(0.9);
     transform-origin: top left; /* or 0 0 */
