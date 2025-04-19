@@ -8,8 +8,8 @@ import Footer from '@/components/common/Footer'; // Импорт компоне�
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'VIKS Next.js SPA',
-    description: 'Next.js, React и TypeScript',
+    title: 'VIKS - Your Marketing Partner',
+    description: 'Marketing Partner',
 };
 
 export default function RootLayout({
