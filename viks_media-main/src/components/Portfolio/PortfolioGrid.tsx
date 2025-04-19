@@ -35,7 +35,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 'item1',
         category: 'uiux',
-        imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFzaGJvYXJkJTIwdWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+        imageUrl: 'viks_media-main/public/images/cases/brandbook1.png',
         title: "Dashboard UI Enhancement",
         description: "Improving user experience for a complex data analytics platform.",
         clientInfo: "DataViz Ltd. 2024",
