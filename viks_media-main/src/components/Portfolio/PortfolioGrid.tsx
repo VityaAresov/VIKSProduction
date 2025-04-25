@@ -6,7 +6,7 @@ import ModalContent from './ModalContent';
 import styles from './PortfolioGrid.module.css';
 
 // --- Тип данных для одного элемента портфолио ---
-type PortfolioItem = {
+export type PortfolioItem = {
   id: string;
   category: string;
   imageUrl: string;
