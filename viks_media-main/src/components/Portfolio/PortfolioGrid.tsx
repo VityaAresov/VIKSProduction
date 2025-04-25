@@ -43,7 +43,7 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item2',
-        category: 'webdev,
+        category: 'webdev',
         imageUrl: '/images/cases/website1.png',
         title: "Targeted Ad Campaign",
         description: "Running a successful digital marketing campaign across multiple platforms.",
