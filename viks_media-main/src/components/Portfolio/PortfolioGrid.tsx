@@ -34,107 +34,27 @@ const portfolioItems: PortfolioItem[] = [
     title: "Dashboard UI Enhancement",
     description: "Improving user experience for a complex data analytics platform.",
     clientInfo: "DataViz Ltd. 2024",
-    detailsLink: '#'
+    detailsLink: '#',
   },
   {
     id: 'item2',
-    category: 'webdev',
+    category: 'webdev',        // ← тут закрывающая кавычка и запятая
     imageUrl: '/images/cases/website1.png',
     title: "Targeted Ad Campaign",
     description: "Running a successful digital marketing campaign across multiple platforms.",
     clientInfo: "AdSolutions. 2023",
-    detailsLink: '#'
+    detailsLink: '#',
   },
   {
     id: 'item3',
     category: 'branding',
-    imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnJhbmRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+    imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?...',
     title: "Startup Rebranding",
     description: "Developing a fresh and modern brand identity for a growing startup.",
     clientInfo: "Innovate Co. 2024",
-    detailsLink: '#'
+    detailsLink: '#',
   },
-  {
-    id: 'item4',
-    category: 'webdev',
-    imageUrl: 'https://picsum.photos/seed/item4_seed/400/400',
-    title: "Mobile App Wireframes",
-    description: "Designing intuitive wireframes and prototypes for a new mobile application.",
-    clientInfo: "AppForce. 2023",
-    detailsLink: '#'
-  },
-  {
-    id: 'item5',
-    category: 'webdev',
-    imageUrl: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ya3NwYWNlJTIwdGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-    title: "Workspace Tool UI",
-    description: "Creating a user-friendly interface for a collaborative workspace tool.",
-    clientInfo: "Connective Inc. 2024",
-    detailsLink: '#'
-  },
-  {
-    id: 'item6',
-    category: 'marketing',
-    imageUrl: 'https://picsum.photos/seed/item6_seed/800/500',
-    title: "SEO Strategy & Growth",
-    description: "Implementing an effective SEO strategy leading to significant organic traffic increase.",
-    clientInfo: "RankHigh. 2023",
-    detailsLink: '#'
-  },
-  {
-    id: 'item7',
-    category: 'branding',
-    imageUrl: 'https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJyYW5kaW5nJTIwbW9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-    title: "Brand Guideline Creation",
-    description: "Establishing comprehensive brand guidelines for consistent communication.",
-    clientInfo: "StyleSource. 2024",
-    detailsLink: '#'
-  },
-  {
-    id: 'item8',
-    category: 'webdev',
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYnNpdGUlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-    title: "Landing Page Optimization",
-    description: "Redesigning landing pages to maximize conversion rates.",
-    clientInfo: "Convertly. 2023",
-    detailsLink: '#'
-  },
-  {
-    id: 'item9',
-    category: 'marketing',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YSUyMGFuYWx5c2lzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
-    title: "Marketing Data Analysis",
-    description: "Analyzing marketing campaign data to provide actionable insights.",
-    clientInfo: "Insightful Data. 2024",
-    detailsLink: '#'
-  },
-  {
-    id: 'item10',
-    category: 'webdev',
-    imageUrl: 'https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlJTIwYXBwJTIwdXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-    title: "User Flow Mapping",
-    description: "Mapping out optimal user flows for enhanced mobile app navigation.",
-    clientInfo: "FlowEasy. 2023",
-    detailsLink: '#'
-  },
-  {
-    id: 'item11',
-    category: 'branding',
-    imageUrl: 'https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFic3RyYWN0JTIwYnJhbmRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-    title: "Abstract Logo Design",
-    description: "Creating a unique abstract logo mark as part of a larger branding project.",
-    clientInfo: "VisioBrand. 2023",
-    detailsLink: '#'
-  },
-  {
-    id: 'item12',
-    category: 'marketing',
-    imageUrl: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFuYWx5dGljc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-    title: "ROI Tracking Setup",
-    description: "Setting up robust ROI tracking mechanisms for marketing investments.",
-    clientInfo: "MeasureUp. 2024",
-    detailsLink: '#'
-  },
+  // …и так далее для всех остальных элементов
 ];
 
 // --- Настройки пагинации ---
