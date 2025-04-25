@@ -38,7 +38,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 'item2',
-    category: 'webdev',        // ← тут закрывающая кавычка и запятая
+    category: 'webdev',
     imageUrl: '/images/cases/website1.png',
     title: "Targeted Ad Campaign",
     description: "Running a successful digital marketing campaign across multiple platforms.",
@@ -61,27 +61,7 @@ const portfolioItems: PortfolioItem[] = [
 const INITIAL_ITEMS_TO_SHOW = 6;
 const ITEMS_PER_LOAD = 3;
 
-// --- Функция перемешивания массива ---
-function shuffleArray<T>(array: T[]): T[] {
-  let currentIndex = array.length, randomIndex;
-  const newArray = [...array];
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-    [newArray[currentIndex], newArray[randomIndex]] = [
-      newArray[randomIndex], newArray[currentIndex]
-    ];
-  }
-  return newArray;
-}
-
-// --- Обёртка для карточки ---
-const MasonryCardWrapper = ({ data }: {
-  data: { item: PortfolioItem; onClick: () => void; };
-  index: number;
-  width: number;
-}) => <PortfolioGridCard item={data.item} onClick={data.onClick} />;
-
+// --- Хук для расчёта числа колонок по ширине ---
 const MOBILE_BREAKPOINT = 768;
 
 const PortfolioGrid: React.FC = () => {
@@ -92,7 +72,10 @@ const PortfolioGrid: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [numColumns, setNumColumns] = useState(3);
 
+  // включаем режим клиента после монтирования
   useEffect(() => { setIsClient(true); }, []);
+
+  // слушаем ресайз для пересчёта колонок
   useEffect(() => {
     const getColumns = () =>
       typeof window !== 'undefined' && window.innerWidth < MOBILE_BREAKPOINT ? 2 : 3;
@@ -111,31 +94,43 @@ const PortfolioGrid: React.FC = () => {
     setTimeout(() => setSelectedItem(null), 300);
   }, []);
 
+  // фильтрация и перемешивание
   const filtered = useMemo(
     () => activeFilter === 'all'
       ? portfolioItems
       : portfolioItems.filter(i => i.category === activeFilter),
     [activeFilter]
   );
-  const shuffled = useMemo(() => shuffleArray(filtered), [filtered]);
+  const shuffled = useMemo(() => {
+    const arr = [...filtered];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [filtered]);
 
+  // подсчёт по фильтрам
   const filterCounts = useMemo(() => {
     const counts: Record<string, number> = { all: portfolioItems.length };
     filters.forEach(f => {
-      if (f.id !== 'all') counts[f.id] = portfolioItems.filter(i => i.category === f.id).length;
+      if (f.id !== 'all') {
+        counts[f.id] = portfolioItems.filter(i => i.category === f.id).length;
+      }
     });
     return counts;
   }, []);
 
-  const itemsToDisplay = useMemo(() =>
-    shuffled.slice(0, visibleCount).map(item => ({ item, onClick: () => openModal(item) })),
-    [shuffled, visibleCount, openModal]
+  const itemsToDisplay = useMemo(
+    () => shuffled.slice(0, visibleCount),
+    [shuffled, visibleCount]
   );
   const hasMore = visibleCount < shuffled.length;
 
   return (
     <section className={styles.portfolioSection}>
       <div className={styles.container}>
+        {/* Заголовок и фильтры */}
         <div className={styles.header}>
           <h2 className={styles.title}>
             Real-world examples of how we have helped companies achieve their marketing objectives.
@@ -145,7 +140,10 @@ const PortfolioGrid: React.FC = () => {
               <button
                 key={f.id}
                 className={`${styles.filterButton} ${activeFilter === f.id ? styles.active : ''}`}
-                onClick={() => { setActiveFilter(f.id); setVisibleCount(INITIAL_ITEMS_TO_SHOW); }}
+                onClick={() => {
+                  setActiveFilter(f.id);
+                  setVisibleCount(INITIAL_ITEMS_TO_SHOW);
+                }}
                 disabled={filterCounts[f.id] === 0 && f.id !== 'all'}
               >
                 {f.label} [{filterCounts[f.id] ?? 0}]
@@ -154,18 +152,23 @@ const PortfolioGrid: React.FC = () => {
           </div>
         </div>
 
+        {/* Masonry-сетка */}
         <div style={{ minHeight: 300 }}>
           {isClient ? (
             itemsToDisplay.length > 0 ? (
               <Masonry
-                items={itemsToDisplay}
-                key={`${activeFilter}-${numColumns}`}
-                columnCount={numColumns}
-                rowGutter={25}
-                columnGutter={25}
-                render={MasonryCardWrapper}
-                overscanBy={5}
-              />
+                breakpointCols={numColumns}
+                className={styles.myMasonryGrid}
+                columnClassName={styles.myMasonryGridColumn}
+              >
+                {itemsToDisplay.map(item => (
+                  <PortfolioGridCard
+                    key={item.id}
+                    item={item}
+                    onClick={() => openModal(item)}
+                  />
+                ))}
+              </Masonry>
             ) : (
               <p className={styles.noItemsMessageFullWidth}>
                 Нет работ для отображения в этой категории.
@@ -176,11 +179,14 @@ const PortfolioGrid: React.FC = () => {
           )}
         </div>
 
+        {/* Кнопка “Показать ещё” */}
         {isClient && hasMore && (
           <div className={styles.showMoreContainer}>
             <button
               className={styles.showMoreButton}
-              onClick={() => setVisibleCount(prev => Math.min(prev + ITEMS_PER_LOAD, shuffled.length))}
+              onClick={() =>
+                setVisibleCount(prev => Math.min(prev + ITEMS_PER_LOAD, shuffled.length))
+              }
             >
               Show More ({shuffled.length - visibleCount} remaining)
             </button>
@@ -188,6 +194,7 @@ const PortfolioGrid: React.FC = () => {
         )}
       </div>
 
+      {/* Модальное окно */}
       <Modal
         open={modalIsOpen}
         onClose={closeModal}
@@ -202,3 +209,4 @@ const PortfolioGrid: React.FC = () => {
 };
 
 export default PortfolioGrid;
+
