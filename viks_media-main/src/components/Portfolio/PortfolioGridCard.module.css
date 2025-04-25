@@ -1,112 +1,96 @@
 /* PortfolioGridCard.module.css */
 
 .cardLink {
-    display: block;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    line-height: 0; /* Keep for image baseline issues if any */
-    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-    cursor: pointer;
-    background-color: #333; /* Fallback background */
-    width: 100%;
-    height: 100%;
-    position: relative; /* <<< REQUIRED for absolute positioning of the overlay */
-    text-decoration: none; /* Ensure no underline on the link */
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .cardLink:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Image Styles --- */
 .imageContainer {
-    width: 100%;
-    height: 100%; /* Let the container fill the link area */
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .cardImage {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease; /* Optional: Keep image zoom or remove */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Optional: Remove image zoom on hover if it distracts from the overlay */
-/*
-.cardLink:hover .cardImage {
-    transform: scale(1.05);
-}
-*/
-
-/* --- Overlay Styles (NEW) --- */
+/* Overlay for hover state */
 .overlay {
-    position: absolute;
-    inset: 0; /* Short for top: 0; right: 0; bottom: 0; left: 0; */
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease-in-out;
-    display: flex; /* Enable flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    padding: 20px; /* Add padding inside the overlay */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    pointer-events: none; /* Allow clicks to pass through to the link */
-    line-height: 1.4; /* Reset line-height for text */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  pointer-events: none;
+  color: #fff;
+  text-align: center;
 }
 
 .cardLink:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-    pointer-events: auto; /* Make overlay interactive if needed (usually not) */
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* --- Text Container Styles (NEW) --- */
 .textContainer {
-    text-align: center;
-    color: #FFFFFF; /* White text */
-    max-width: 100%; /* Ensure text container doesn't overflow overlay padding */
+  max-width: 90%;
 }
 
-/* --- Text Element Styles (NEW) --- */
 .cardTitle {
-    font-size: 1.2rem; /* Adjust as needed */
-    font-weight: bold;
-    margin: 0 0 10px 0; /* Bottom margin */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .cardDescription {
-    font-size: 0.9rem; /* Adjust as needed */
-    margin: 0 0 15px 0; /* Bottom margin */
-    opacity: 0.9; /* Slightly less prominent than title */
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
 }
 
 .cardClient {
-    font-size: 0.8rem; /* Adjust as needed */
-    font-style: italic;
-    margin: 0;
-    opacity: 0.7; /* Even less prominent */
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.7;
 }
 
-
-/* Remove old size classes - they are not needed with Masonic handling layout */
-/* .normal, .tall, .wide { ... } */
-
-/* --- Keep Responsive Adjustments if they affect things other than grid rows --- */
-/* Example: If you wanted text size smaller on mobile */
 @media (max-width: 540px) {
-    .cardTitle {
-        font-size: 1rem;
-    }
-    .cardDescription {
-        font-size: 0.8rem;
-    }
-    .cardClient {
-        font-size: 0.75rem;
-    }
-    .overlay {
-        padding: 15px; /* Less padding on small screens */
-    }
+  .overlay {
+    padding: 15px;
+  }
+  .cardTitle {
+    font-size: 1rem;
+  }
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+  .cardClient {
+    font-size: 0.75rem;
+  }
 }
