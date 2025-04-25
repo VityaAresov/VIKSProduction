@@ -43,8 +43,8 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item2',
-        category: 'marketing',
-        imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFya2V0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
+        category: 'webdev,
+        imageUrl: '/images/cases/website1.png',
         title: "Targeted Ad Campaign",
         description: "Running a successful digital marketing campaign across multiple platforms.",
         clientInfo: "AdSolutions. 2023",
