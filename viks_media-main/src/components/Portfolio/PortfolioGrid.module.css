@@ -192,8 +192,14 @@
 /* === Стили для Модального Окна (ЛОКАЛЬНЫЕ) ===== */
 /* ================================================ */
 
-.customOverlay {}
-.customModal {}
+.customOverlay {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.customModal {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
 
 /* ====================================== */
 /* === Стили для ModalContent.tsx ======= */
