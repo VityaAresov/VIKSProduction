@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import Masonry from 'react-masonry-component';
+import Masonry from 'react-masonry-css';
 import { Modal } from 'react-responsive-modal';
 import PortfolioGridCard from './PortfolioGridCard';
 import ModalContent from './ModalContent';
