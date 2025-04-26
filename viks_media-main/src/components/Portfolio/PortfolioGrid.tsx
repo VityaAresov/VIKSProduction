@@ -53,7 +53,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 'item3',
         category: 'video',
-        imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnJhbmRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
+        imageUrl: '/images/cases/btsdeadmoney.png',
         title: "Backstage of the music video",
         description: "Backstage of the global music video shoot in Miami, Florida",
         clientInfo: "Diztortion Music",
