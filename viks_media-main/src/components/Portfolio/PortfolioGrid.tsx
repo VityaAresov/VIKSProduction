@@ -23,7 +23,7 @@ export interface PortfolioItem {
 // --- Фильтры ---
 const filters = [
     { id: 'all', label: 'All Work' },
-    { id: 'videography', label: 'Videography' },
+    { id: 'video', label: 'Videography' },
     { id: 'marketing', label: 'Digital Marketing' },
     { id: 'branding', label: 'Branding' },
     { id: 'webdev', label: 'Web Development' },
@@ -34,30 +34,30 @@ const portfolioItems: PortfolioItem[] = [
     // ... (your existing portfolioItems array) ...
     {
         id: 'item1',
-        category: 'webdev',
-        imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFzaGJvYXJkJTIwdWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-        title: "Dashboard UI Enhancement",
-        description: "Improving user experience for a complex data analytics platform.",
-        clientInfo: "DataViz Ltd. 2024",
-        detailsLink: '#'
+        category: 'video',
+        imageUrl: '/images/cases/anastasiia.png',
+        title: "DJ set shooting",
+        description: "Outdoor multi-camera & drone shoot of DJ Anastasiia’s live set against the Golden Gate Bridge—capturing sweeping aerials and close-up energy for an immersive, cinematic experience.",
+        clientInfo: "DJ Anastasiia",
+        detailsLink: 'https://www.youtube.com/watch?v=I1WzFnNTiMw&ab_channel=ANASTASiiA'
     },
     {
         id: 'item2',
-        category: 'marketing',
-        imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFya2V0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
-        title: "Targeted Ad Campaign",
-        description: "Running a successful digital marketing campaign across multiple platforms.",
-        clientInfo: "AdSolutions. 2023",
-        detailsLink: '#'
+        category: 'video',
+        imageUrl: '/images/cases/grosshunter.png',
+        title: "GROS HUNTER - FASHION FILM",
+        description: "Fashion film for Gross Hunter—staged with professional talent and cinema-grade camera work to spotlight the label’s style in a sleek, editorial narrative.",
+        clientInfo: "Gross Hunter",
+        detailsLink: 'https://youtu.be/LOAreXKUSy4'
     },
     {
         id: 'item3',
-        category: 'branding',
+        category: 'video',
         imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnJhbmRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-        title: "Startup Rebranding",
-        description: "Developing a fresh and modern brand identity for a growing startup.",
-        clientInfo: "Innovate Co. 2024",
-        detailsLink: '#'
+        title: "Backstage of the music video",
+        description: "Backstage of the global music video shoot in Miami, Florida",
+        clientInfo: "Diztortion Music",
+        detailsLink: 'https://youtu.be/fCJpnf8NT6g'
     },
     {
         id: 'item4',
