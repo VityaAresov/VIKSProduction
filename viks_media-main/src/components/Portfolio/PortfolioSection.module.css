@@ -1,30 +1,34 @@
 .portfolioSection {
-  /* чтобы блок тянулся на всю ширину экрана: */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-
-  /* фон: */
-  background: url('/images/Frame 427320835.png') no-repeat center center / cover;
-  /* если вам нужно, чтобы фон перекрывал и по высоте весь экран: */
-  min-height: 100vh;
-
-  /* остальное как было: */
-  color: #fff;
+  /* Чтобы секция по-прежнему имела внешние отступы */
   padding: 60px 0 80px;
-  overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  /* Фон уже не на section, а на .portfolioContainer */
 }
 
-/* а уже внутри него — обычный контейнер для текста/карточек: */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Вот этот блок — наш «контейнер-с­фоном» */
+.portfolioContainer {
+  max-width: 1280px;      /* желаемая ширина контента */
+  margin: 0 auto;         /* центрирование */
+  padding: 60px 40px;     /* внутренние отступы */
+
+  /* фон с cover */
+  background: url('/images/Frame 427320835.png')
+              no-repeat center center / cover;
+
+  /* скругляем углы */
+  border-radius: 16px;
+
+  /* чтобы фон и содержимое обрезались по скруглённым углам */
+  overflow: hidden;
 }
+
+/* остальная стилизация */
+.heading {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  /* и т. д. */
+}
+.filters { /* … */ }
+.grid    { /* … */ }
 
 .header {
     display: flex;
