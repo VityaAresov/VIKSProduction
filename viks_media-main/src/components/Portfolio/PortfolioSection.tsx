@@ -32,6 +32,15 @@ const portfolioItems: PortfolioItem[] = [
         detailsLink: '#'
     },
     {
+        id: 'item6',
+        category: 'video',
+        imageUrl: '/images/blog_image.png',
+        title: "3WH Boosts OzParty's Bucks Bookings by 36%",
+        description: "A series of landing page redesigns...",
+        clientInfo: null,
+        detailsLink: '#'
+    },
+    {
         id: 'item2',
         category: 'marketing',
         imageUrl: '/images/blog_image.png',
@@ -84,7 +93,7 @@ const filters = [
   ...uniqueCats.map(cat => ({
     id: cat,
     label: {
-      uiux:      'UI/UX Design',
+      video:      'Videography',
       marketing: 'Digital Marketing',
       branding:  'Branding',
       webdev:    'Web Development'
