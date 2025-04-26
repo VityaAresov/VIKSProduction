@@ -26,7 +26,7 @@ const filters = [
     { id: 'videography', label: 'Videography' },
     { id: 'marketing', label: 'Digital Marketing' },
     { id: 'branding', label: 'Branding' },
-    { id: 'web development', label: 'Web Development' },
+    { id: 'webdev', label: 'Web Development' },
 ];
 
 // --- Демонстрационные данные (остаются без изменений) ---
@@ -34,7 +34,7 @@ const portfolioItems: PortfolioItem[] = [
     // ... (your existing portfolioItems array) ...
     {
         id: 'item1',
-        category: 'uiux',
+        category: 'webdev',
         imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFzaGJvYXJkJTIwdWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
         title: "Dashboard UI Enhancement",
         description: "Improving user experience for a complex data analytics platform.",
@@ -61,7 +61,7 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item4',
-        category: 'uiux',
+        category: 'webdev',
         imageUrl: 'https://picsum.photos/seed/item4_seed/400/400',
         title: "Mobile App Wireframes",
         description: "Designing intuitive wireframes and prototypes for a new mobile application.",
@@ -70,7 +70,7 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item5',
-        category: 'uiux',
+        category: 'webdev',
         imageUrl: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ya3NwYWNlJTIwdGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
         title: "Workspace Tool UI",
         description: "Creating a user-friendly interface for a collaborative workspace tool.",
@@ -97,7 +97,7 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item8',
-        category: 'uiux',
+        category: 'webdev',
         imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYnNpdGUlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
         title: "Landing Page Optimization",
         description: "Redesigning landing pages to maximize conversion rates.",
@@ -115,7 +115,7 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item10',
-        category: 'uiux',
+        category: 'webdev',
         imageUrl: 'https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9iaWxlJTIwYXBwJTIwdXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
         title: "User Flow Mapping",
         description: "Mapping out optimal user flows for enhanced mobile app navigation.",
