@@ -1,30 +1,30 @@
-
-
-
 .portfolioSection {
-  background: url('/images/Frame 427320835.png') no-repeat center center;
-  background-size: cover;    /* растягиваем фон под весь блок */
-  color: #FFFFFF;
-  margin: 0 auto;
-  padding: 60px 0 80px;
+  /* чтобы блок тянулся на всю ширину экрана: */
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  /* фон: */
+  background: url('/images/Frame 427320835.png') no-repeat center center / cover;
+  /* если вам нужно, чтобы фон перекрывал и по высоте весь экран: */
+  min-height: 100vh;
+
+  /* остальное как было: */
+  color: #fff;
+  padding: 60px 0 80px;
   overflow: hidden;
-  min-height: 800px;
   font-family: 'Open Sans', sans-serif;
 }
 
-
+/* а уже внутри него — обычный контейнер для текста/карточек: */
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
 
 .header {
     display: flex;
