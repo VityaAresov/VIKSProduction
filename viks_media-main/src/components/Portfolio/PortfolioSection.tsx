@@ -115,26 +115,26 @@ const PortfolioSection: React.FC = () => {
         swiperInstance?.slideNext();
     };
 
-    return (
-        <section className={styles.portfolioSection}>
-            <div className={styles.container}>
+    export function PortfolioSection() {
+  return (
+    <section className={styles.portfolioSection}>
+      {/* Внутренний контейнер с фоном и скруглениями */}
+      <div className={styles.portfolioContainer}>
+        <h2 className={styles.heading}>
+          Real-world examples of how we have helped companies achieve their marketing objectives.
+        </h2>
 
-                <div className={styles.header}>
-                    <h2 className={styles.title}>
-                        Real-world examples of how we have helped companies achieve their marketing objectives.
-                    </h2>
-                    <div className={styles.filters}>
-                        {filters.map(filter => (
-                            <button
-                                key={filter.id}
-                                className={`${styles.filterButton} ${activeFilter === filter.id ? styles.active : ''}`}
-                                onClick={() => setActiveFilter(filter.id)}
-                            >
-                                {filter.label} [{filter.count}]
-                            </button>
-                        ))}
-                    </div>
-                </div>
+        <div className={styles.filters}>
+          {/* ваши кнопки фильтров */}
+        </div>
+
+        <div className={styles.grid}>
+          {/* ваши карточки */}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 
                 <div className={styles.sliderArea}>
