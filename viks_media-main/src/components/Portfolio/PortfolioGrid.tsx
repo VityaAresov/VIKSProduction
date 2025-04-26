@@ -37,7 +37,8 @@ const portfolioItems: PortfolioItem[] = [
         category: 'video',
         imageUrl: '/images/cases/anastasiia.png',
         title: "DJ set shooting",
-        description: "Outdoor multi-camera & drone shoot of DJ Anastasiia’s live set against the Golden Gate Bridge—capturing sweeping aerials and close-up energy for an immersive, cinematic experience.",
+        description: "Outdoor multi-camera & drone shoot of DJ Anastasiia’s live set against the Golden Gate Bridge—capturing sweeping aerials and close-up energy for an immersive, cinematic experience.
+Watch Full Video: https://www.youtube.com/watch?v=I1WzFnNTiMw&ab_channel=ANASTASiiA",
         clientInfo: "DJ Anastasiia",
         detailsLink: 'https://www.youtube.com/watch?v=I1WzFnNTiMw&ab_channel=ANASTASiiA'
     },
@@ -46,7 +47,8 @@ const portfolioItems: PortfolioItem[] = [
         category: 'video',
         imageUrl: '/images/cases/grosshunter.png',
         title: "GROS HUNTER - FASHION FILM",
-        description: "Fashion film for Gross Hunter—staged with professional talent and cinema-grade camera work to spotlight the label’s style in a sleek, editorial narrative.",
+        description: "Fashion film for Gross Hunter—staged with professional talent and cinema-grade camera work to spotlight the label’s style in a sleek, editorial narrative.
+Watch Full Video: https://youtu.be/LOAreXKUSy4",
         clientInfo: "Gross Hunter",
         detailsLink: 'https://youtu.be/LOAreXKUSy4'
     },
@@ -55,7 +57,8 @@ const portfolioItems: PortfolioItem[] = [
         category: 'video',
         imageUrl: '/images/cases/btsdeadmoney.png',
         title: "Backstage of the music video",
-        description: "Backstage of the global music video shoot in Miami, Florida",
+        description: "Backstage of the global music video shoot in Miami, Florida
+Watch Full Video: https://youtu.be/fCJpnf8NT6g",
         clientInfo: "Diztortion Music",
         detailsLink: 'https://youtu.be/fCJpnf8NT6g'
     },
