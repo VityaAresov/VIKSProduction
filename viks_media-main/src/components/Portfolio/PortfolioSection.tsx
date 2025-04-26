@@ -21,12 +21,21 @@ interface PortfolioItem {
     detailsLink: string;
 }
 
+const uniqueCats = Array.from(new Set(portfolioItems.map(i => i.category)));
+
 const filters = [
-    {id: 'all', label: 'All Work', count: 20},
-    {id: 'videography', label: 'Videography', count: 10},
-    {id: 'marketing', label: 'Digital Marketing', count: 5},
-    {id: 'branding', label: 'Branding', count: 5},
-    {id: 'webdev', label: 'Web Development', count: 5},
+  { id: 'all', label: 'All Work', count: portfolioItems.length },
+  ...uniqueCats.map(cat => ({
+    id: cat,
+    // для читабельности можно маппить id → человекочитаемый label:
+    label: {
+      uiux: 'UI/UX Design',
+      marketing: 'Digital Marketing',
+      branding: 'Branding',
+      // …другие
+    }[cat] ?? cat,
+    count: portfolioItems.filter(i => i.category === cat).length
+  }))
 ];
 
 const portfolioItems: PortfolioItem[] = [
