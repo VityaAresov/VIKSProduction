@@ -93,26 +93,12 @@
     color: #010205;
 }
 
-/* --- Masonry Grid Styles --- */
-.myMasonryGrid {
-    display: flex;
-    margin-left: -25px;
-    width: auto;
-}
-.myMasonryGridColumn {
-    padding-left: 25px;
-    background-clip: padding-box;
-}
-.myMasonryGridColumn > * {
-    margin-bottom: 25px;
-}
-
 /* --- Сообщение об отсутствии элементов --- */
 .noItemsMessageFullWidth {
     width: 100%;
     text-align: center;
     padding: 50px 20px;
-    color: #d1d5db;
+    color: #d1d5db; /* Цвет текста для сообщения */
     font-size: 18px;
     font-style: italic;
 }
@@ -154,34 +140,133 @@
     box-shadow: 0px 2px 5px rgba(153, 207, 99, 0.3);
 }
 
-/* ========================================= */
-/* === Стили для Модального Окна ======= */
-/* ========================================= */
+/* ====================================== */
+/* === Стили для PortfolioGridCard.tsx == */
+/* ====================================== */
 
-.customOverlay {
-    backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.3);
+.cardLink {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    line-height: 0;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    cursor: pointer;
+    background-color: #333; /* Фон для карточки пока грузится изображение */
+    width: 100%;
+    /* height: 100%; - Лучше задавать через aspect-ratio или оставить на Masonry */
+    aspect-ratio: 4 / 3; /* Пример соотношения сторон, настройте под себя */
+    position: relative;
+    text-decoration: none;
 }
-.customModal {
-    width: 80vw;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-    padding: 20px;
-    background-color: #ffffff;
+
+.cardLink:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* ================================================ */
-/* === Стили для ModalContent.tsx ======= */
-/* ================================================ */
-
-.modalLayout {
-    display: flex;
+.imageContainer { /* Используется внутри PortfolioGridCard.tsx */
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    overflow: hidden;
 }
+
+.cardImage { /* Используется внутри PortfolioGridCard.tsx */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.cardLink:hover .cardImage {
+    transform: scale(1.05); /* Легкий зум при наведении */
+}
+
+
+.overlay { /* Используется внутри PortfolioGridCard.tsx */
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    pointer-events: none;
+    line-height: 1.4;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.cardLink:hover .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.textContainer { /* Можно удалить, если стили текста задаются в .overlay */
+    /* text-align: center; */
+    /* color: #FFFFFF; */
+    max-width: 100%;
+}
+
+.cardTitle { /* Используется внутри PortfolioGridCard.tsx */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.cardDescription { /* Используется внутри PortfolioGridCard.tsx */
+    font-size: 0.9rem;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+    /* Опционально: ограничение строк */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; */
+}
+
+.cardClient { /* Используется внутри PortfolioGridCard.tsx */
+    font-size: 0.8rem;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.7;
+}
+
+
+/* ================================================ */
+/* === Стили для Модального Окна (ЛОКАЛЬНЫЕ) ===== */
+/* ================================================ */
+/* ВСЕ :global(...) правила УДАЛЕНЫ отсюда и перенесены в globals.css */
+
+/* Локальный класс для оверлея (если нужны доп. стили) */
+.customOverlay {
+    /* backdrop-filter: blur(3px); */ /* Например, добавление блюра */
+}
+
+/* Локальный класс для модалки (если нужны доп. стили) */
+.customModal {
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.5); */ /* Например, другая тень */
+}
+
+/* ====================================== */
+/* === Стили для ModalContent.tsx ======= */
+/* ====================================== */
+/* (Эти стили остаются локальными и не меняются) */
+
+/* --- Основной контейнер контента модалки (flex) --- */
+.modalLayout {
+    display: flex;
+    width: 100%; /* Заполняет контейнер модалки */
+    height: 100%; /* Заполняет контейнер модалки */
+    /* max-height наследуется от .react-responsive-modal-modal из globals.css */
+    background-color: #ffffff; /* Светлый фон контента */
+}
+
+/* --- Обёртка для изображения (левая часть) --- */
 .modalImageWrapper {
     flex: 1 1 60%;
     background-color: #000000;
@@ -192,6 +277,8 @@
     position: relative;
     min-width: 0;
 }
+
+/* --- Изображение в модалке --- */
 .modalImage {
     display: block;
     width: 100%;
@@ -200,21 +287,29 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+/* --- Обёртка для текста (правая часть) --- */
 .modalTextWrapper {
     flex: 1 1 40%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* height: 100%; Не нужно, flex сделает сам */
+    /* max-height наследуется */
+    overflow: hidden; /* Для скролла внутри */
     background-color: #ffffff;
     color: #1c1e21;
-    min-width: 0;
+    min-width: 0; /* Предотвращает "выталкивание" из flex */
 }
+
+/* --- Область с текстом, которая может скроллиться --- */
 .modalTextScrollable {
-    padding: 30px 35px;
-    overflow-y: auto;
-    flex-grow: 1;
+    padding: 30px 35px; /* Отступы внутри текстовой области */
+    overflow-y: auto; /* Вертикальный скролл при необходимости */
+    flex-grow: 1; /* Занимает все доступное место */
     -webkit-overflow-scrolling: touch;
 }
+
+/* --- Стили текста внутри модалки --- */
 .modalTitle {
     font-family: 'Evolventa', sans-serif;
     font-size: 1.8rem;
@@ -224,6 +319,7 @@
     line-height: 1.3;
     color: #050505;
 }
+
 .modalDescription {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
@@ -233,6 +329,7 @@
     color: #333333;
     word-wrap: break-word;
 }
+
 .modalClientInfo {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
@@ -241,19 +338,25 @@
     margin-bottom: 15px;
 }
 
-/* ================================================ */
-/* === RESPONSIVE STYLES ====== */
-/* ================================================ */
 
+/* ================================================ */
+/* === RESPONSIVE STYLES (Только ЛОКАЛЬНЫЕ) ====== */
+/* ================================================ */
+/* Адаптивные стили для :global перенесены в globals.css */
+
+/* --- Планшеты --- */
 @media (max-width: 1024px) {
     .title { font-size: 40px; }
+    /* Меняем соотношение картинка/текст в модалке */
     .modalImageWrapper { flex-basis: 55%; }
     .modalTextWrapper { flex-basis: 45%; }
     .modalTitle { font-size: 1.6rem; }
     .modalTextScrollable { padding: 25px 30px; }
 }
 
+/* --- Маленькие планшеты / Большие телефоны --- */
 @media (max-width: 768px) {
+    /* Стили для основной сетки */
     .portfolioSection { padding: 40px 0 60px; }
     .container { gap: 30px; padding: 0 15px; }
     .title { font-size: 32px; max-width: 95%; }
@@ -262,15 +365,33 @@
     .filterButton { font-size: 14px; padding: 10px 20px; }
     .showMoreButton { padding: 12px 30px; font-size: 15px; }
 
-    .modalLayout { flex-direction: column; }
-    .modalImageWrapper { flex-basis: auto; flex-shrink: 0; width: 100%; height: min(60vw, 40vh); }
-    .modalTextWrapper { flex-basis: auto; flex-grow: 1; width: 100%; overflow: hidden; }
+    /* Адаптация ЛОКАЛЬНОГО макета модального окна: стек */
+    .modalLayout {
+        flex-direction: column; /* Картинка над текстом */
+        /* height и max-height управляются глобальным контейнером */
+    }
+    .modalImageWrapper {
+        flex-basis: auto; /* Сброс flex-basis */
+        flex-shrink: 0;
+        width: 100%;
+        height: min(60vw, 40vh); /* Адаптивная высота картинки */
+    }
+    .modalTextWrapper {
+        flex-basis: auto; /* Сброс flex-basis */
+        flex-grow: 1; /* Текст занимает оставшееся место */
+        width: 100%;
+        /* max-height: none; -> не нужно, управляется скроллом */
+        overflow: hidden; /* Важно оставить */
+    }
     .modalTextScrollable { padding: 20px 25px; }
     .modalTitle { font-size: 1.5rem; }
     .modalDescription { font-size: 0.95rem; }
+    /* Адаптация глобальной модалки (:global) находится в globals.css */
 }
 
+/* --- Маленькие телефоны --- */
 @media (max-width: 540px) {
+    /* Стили для основной сетки */
     .portfolioSection { padding: 30px 0 50px; }
     .title { font-size: 28px; }
     .container { gap: 25px; }
@@ -278,12 +399,15 @@
     .filterButton { font-size: 13px; padding: 8px 16px; }
     .showMoreButton { padding: 10px 25px; font-size: 14px; }
 
+    /* Стили для оверлея карточки */
     .cardTitle { font-size: 1rem; }
     .cardDescription { font-size: 0.8rem; }
     .cardClient { font-size: 0.75rem; }
     .overlay { padding: 15px; }
 
+    /* Уменьшаем отступы и размеры текста в модалке */
     .modalTextScrollable { padding: 15px 20px; }
     .modalTitle { font-size: 1.3rem; }
     .modalDescription { font-size: 0.9rem; }
+    /* Адаптация кнопки закрытия (:global) находится в globals.css */
 }
