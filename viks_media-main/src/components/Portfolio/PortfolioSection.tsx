@@ -174,24 +174,4 @@ const PortfolioSection: React.FC = () => {
     );
 };
 
-export function PortfolioSection() {
-  return (
-    <section className={styles.portfolioSection}>
-      {/* Внутренний контейнер с фоном и скруглениями */}
-      <div className={styles.portfolioContainer}>
-        <h2 className={styles.heading}>
-          Real-world examples of how we have helped companies achieve their marketing objectives.
-        </h2>
-
-        <div className={styles.filters}>
-          {/* ваши кнопки фильтров */}
-        </div>
-
-        <div className={styles.grid}>
-          {/* ваши карточки */}
-        </div>
-      </div>
-    </section>
-  )
-}
-
+export default PortfolioSection;
