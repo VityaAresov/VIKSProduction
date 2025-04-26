@@ -2,14 +2,15 @@
 
 
 .portfolioSection {
-    background: url('/images/Frame 427320835.png') no-repeat center center;
-    color: #FFFFFF;
-    margin: 0 auto;
-    padding: 60px 0 80px;
-    position: relative;
-    overflow: hidden;
-    min-height: 800px;
-    font-family: 'Open Sans', sans-serif;
+  background: url('/images/Frame 427320835.png') no-repeat center center;
+  background-size: cover;    /* растягиваем фон под весь блок */
+  color: #FFFFFF;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+  position: relative;
+  overflow: hidden;
+  min-height: 800px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
