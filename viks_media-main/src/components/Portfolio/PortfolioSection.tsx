@@ -21,23 +21,6 @@ interface PortfolioItem {
     detailsLink: string;
 }
 
-const uniqueCats = Array.from(new Set(portfolioItems.map(i => i.category)));
-
-const filters = [
-  { id: 'all', label: 'All Work', count: portfolioItems.length },
-  ...uniqueCats.map(cat => ({
-    id: cat,
-    // для читабельности можно маппить id → человекочитаемый label:
-    label: {
-      uiux: 'UI/UX Design',
-      marketing: 'Digital Marketing',
-      branding: 'Branding',
-      // …другие
-    }[cat] ?? cat,
-    count: portfolioItems.filter(i => i.category === cat).length
-  }))
-];
-
 const portfolioItems: PortfolioItem[] = [
     {
         id: 'item1',
@@ -87,9 +70,32 @@ const portfolioItems: PortfolioItem[] = [
 
 ];
 
+const uniqueCats = Array.from(
+  new Set(portfolioItems.map(i => i.category))
+);
+
+// 3) И только после этого строим фильтры на их основе
+const filters = [
+  { 
+    id: 'all', 
+    label: 'All Work', 
+    count: portfolioItems.length 
+  },
+  ...uniqueCats.map(cat => ({
+    id: cat,
+    label: {
+      uiux:      'UI/UX Design',
+      marketing: 'Digital Marketing',
+      branding:  'Branding',
+      webdev:    'Web Development'
+    }[cat] ?? cat,
+    count: portfolioItems.filter(i => i.category === cat).length
+  }))
+];
+
 
 const PortfolioSection: React.FC = () => {
-    const [activeFilter, setActiveFilter] = useState<string>('uiux');
+    const [activeFilter, setActiveFilter] = useState<string>('all');
     const [swiperInstance, setSwiperInstance] = useState<SwiperCore | null>(null);
 
     const [slidesPerViewValue, setSlidesPerViewValue] = useState<number>(1);
