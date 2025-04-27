@@ -61,12 +61,12 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item4',
-        category: 'webdev',
-        imageUrl: 'https://picsum.photos/seed/item4_seed/400/400',
-        title: "Mobile App Wireframes",
-        description: "Designing intuitive wireframes and prototypes for a new mobile application.",
-        clientInfo: "AppForce. 2023",
-        detailsLink: '#'
+        category: 'video',
+        imageUrl: '/images/cases/fashionads.jpg',
+        title: "Fashion Commercial Video",
+        description: "Cinematic commercial for NU BODY—stylized lighting, dynamic model choreography, and fluid camera work that spotlight each garment’s fit and texture in a sleek 30-second brand piece.",
+        clientInfo: "NU BODY",
+        detailsLink: 'https://youtu.be/b9ifE-5Lmtc'
     },
     {
         id: 'item5',
