@@ -71,7 +71,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 'item5',
         category: 'video',
-        imageUrl: 'xf1ads.png',
+        imageUrl: '/images/cases/xf1ads.png',
         title: "Commercial for a Brazilian cosmetics brand",
         description: "50-second spot for a Brazilian cosmetics brand, filmed inside and outside home to capture relaxed, everyday beauty moments.",
         clientInfo: "TXC",
