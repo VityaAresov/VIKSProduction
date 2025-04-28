@@ -62,7 +62,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 'item4',
         category: 'video',
-        imageUrl: '/images/cases/fashionads.jpg',
+        imageUrl: '/images/cases/fashionads.png',
         title: "Fashion Commercial Video",
         description: "Cinematic commercial for NU BODY—stylized lighting, dynamic model choreography, and fluid camera work that spotlight each garment’s fit and texture in a sleek 30-second brand piece.",
         clientInfo: "NU BODY",
@@ -70,12 +70,12 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item5',
-        category: 'webdev',
-        imageUrl: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29ya3NwYWNlJTIwdGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-        title: "Workspace Tool UI",
-        description: "Creating a user-friendly interface for a collaborative workspace tool.",
-        clientInfo: "Connective Inc. 2024",
-        detailsLink: '#'
+        category: 'video',
+        imageUrl: 'xf1ads.png',
+        title: "Commercial for a Brazilian cosmetics brand",
+        description: "50-second spot for a Brazilian cosmetics brand, filmed inside and outside home to capture relaxed, everyday beauty moments.",
+        clientInfo: "TXC",
+        detailsLink: 'https://youtu.be/ZMn_VBZahIw'
     },
     {
         id: 'item6',
