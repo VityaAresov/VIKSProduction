@@ -79,12 +79,12 @@ const portfolioItems: PortfolioItem[] = [
     },
     {
         id: 'item6',
-        category: 'marketing',
-        imageUrl: 'https://picsum.photos/seed/item6_seed/800/500',
-        title: "SEO Strategy & Growth",
-        description: "Implementing an effective SEO strategy leading to significant organic traffic increase.",
-        clientInfo: "RankHigh. 2023",
-        detailsLink: '#'
+        category: 'webdev',
+        imageUrl: '/images/cases/website11.png',
+        title: "E-commerce Website Builder",
+        description: "Designing a clean and intuitive UI for an e-commerce website builder tailored to modern online businesses.",
+        clientInfo: "#",
+        detailsLink: 'https://www.behance.net/gallery/202612505/Design-for-E-commerce-website-builder'
     },
     {
         id: 'item7',
