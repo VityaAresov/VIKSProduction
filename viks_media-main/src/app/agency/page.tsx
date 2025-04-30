@@ -66,17 +66,17 @@ const teamMembers: TeamMember[] = [
     },
     {
         id: 3,
-        name: "Valeriy",
-        title: "CMO",
-        description: "Crafts narratives that inspire, motivate, and connect with audiences.",
+        name: "Eva",
+        title: "Lead Designer",
+        description: "Focuses on creating compelling visual narratives and brand aesthetics.",
         image: teamMember3,
         socials: { linkedin: "#", twitter: "#", dribbble: "#" }
     },
     {
         id: 4,
-        name: "Another Member",
-        title: "Lead Designer",
-        description: "Focuses on creating compelling visual narratives and brand aesthetics.",
+        name: "Marden",
+        title: "Videographer",
+        description: "Transforms ideas into cinematic journeys — where every frame feels like it belongs on the big screen.",
         image: teamMember4,
         socials: { linkedin: "#", twitter: "#", dribbble: "#" }
     },
