@@ -80,14 +80,6 @@ const teamMembers: TeamMember[] = [
         image: teamMember4,
         socials: { linkedin: "#", twitter: "#", dribbble: "#" }
     },
-    {
-        id: 5,
-        name: "Team Member 5",
-        title: "Strategist",
-        description: "Develops strategic approaches to content and audience engagement.",
-        image: placeholderImage1, // Using placeholder for missing image
-        socials: { linkedin: "#", twitter: "#", dribbble: "#" }
-    },
 ];
 
 
