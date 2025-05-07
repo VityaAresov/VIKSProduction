@@ -731,19 +731,16 @@ min-height: 360px; /* Adjust min height */
 transform: scale(1.02); /* Slightly reduce scale \*/
 }
 
-```
 /* Adjust CTA gap */
 .ctaContainer {
     gap: 60px 200px; /* Reduce main gap */
 }
-```
 
 }
 
 @media (max-width: 960px) {
 /* Tablet adjustments \*/
 
-```
 /* General Section Padding */
 .headerSection, .layoutSection, .creativeDirectionSection, .postProductionSection, .pricingSection, .footerSection {
     padding-left: 40px;
@@ -813,14 +810,12 @@ transform: scale(1.02); /* Slightly reduce scale \*/
     gap: 40px 50px;
     width: 100%; /* Ensure nav takes full width */
 }
-```
 
 }
 
 @media (max-width: 600px) {
 /* Mobile adjustments \*/
 
-```
 /* General Section Padding & Gaps */
 .headerSection, .layoutSection, .creativeDirectionSection, .postProductionSection, .pricingSection, .footerSection {
     padding: 60px 20px; /* Reduce padding */
@@ -923,7 +918,6 @@ transform: scale(1.02); /* Slightly reduce scale \*/
 }
 /* End CTA mobile adjustments */
 
-
 /* Footer Stacking */
 .footerContainer {
     flex-direction: column; /* Stack footer sections */
@@ -955,6 +949,5 @@ transform: scale(1.02); /* Slightly reduce scale \*/
     justify-content: center; /* Center contact items */
     text-align: left; /* Keep contact details text left aligned */
 }
-```
 
 }
