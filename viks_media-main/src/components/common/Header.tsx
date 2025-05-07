@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react'; // Import useEffect
 import Link from 'next/link';
+import services from '@/data/services'
 import Image from 'next/image';
 
 import AnimatedMenuIcon from './AnimatedMenuIcon'; // Your animated icon component
