@@ -1,18 +1,4 @@
 /\* Import fonts */
-@import url('[https://fonts.googleapis.com/css2?family=Roboto\:wght@300;400;600;700\&display=swap](https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap)');
-@import url('[https://fonts.googleapis.com/css2?family=Open+Sans\:wght@400;600;700\&display=swap](https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap)');
-@import url('[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans\:wght@600;700\&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap)'); /* Added Plus Jakarta Sans \*/
-@import url('[https://fonts.googleapis.com/css2?family=Caveat\:wght@700\&display=swap](https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap)');
-
-/\* Ensure font like Evolventa is loaded if used */
-@font-face {
-font-family: 'Evolventa';
-src: url('/fonts/evolventa-bold.woff2') format('woff2'), /* ADJUST PATH */
-url('/fonts/evolventa-bold.woff') format('woff');   /* ADJUST PATH \*/
-font-weight: 700;
-font-style: normal;
-}
-
 /\* --- Base Page Container --- */
 .pageContainer {
 position: relative;
