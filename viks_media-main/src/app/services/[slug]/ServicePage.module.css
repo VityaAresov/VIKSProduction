@@ -1,953 +1,975 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap'); /* Added Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+/* Ensure font like Evolventa is loaded if used */
+@font-face {
+    font-family: 'Evolventa';
+    src: url('/fonts/evolventa-bold.woff2') format('woff2'), /* ADJUST PATH */
+    url('/fonts/evolventa-bold.woff') format('woff');   /* ADJUST PATH */
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* --- Base Page Container --- */
 .pageContainer {
-position: relative;
-width: 100%;
-max-width: 1440px; /* Consistent max-width */
-margin: 0 auto;
-background: #FFFFFF;
-overflow-x: hidden; /* Prevent horizontal scroll \*/
+    position: relative;
+    width: 100%;
+    max-width: 1440px; /* Consistent max-width */
+    margin: 0 auto;
+    background: #FFFFFF;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* --- Section 1: Header --- */
 .headerSection {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-padding: 112px 80px;
-gap: 80px;
-background: #FFFFFF;
-box-sizing: border-box;
-width: 100%;
-max-width: 1440px;
-margin-left: auto;
-margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 112px 80px;
+    gap: 80px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .headerContentContainer {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 0px;
-gap: 32px;
-flex: 1;
-min-width: 300px;
-max-width: 613px;
-flex-basis: 45%;
-order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 613px;
+    flex-basis: 45%;
+    order: 1;
 }
 .taglineWrapper {
-display: flex;
+    display: flex;
 }
 .tagline {
-font-family: 'Roboto', sans-serif;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-color: #000000;
-margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    margin: 0;
 }
 .headerTextContent {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 20px;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    width: 100%;
 }
 .heading1 {
-margin: 0;
-font-family: 'Evolventa', sans-serif;
-font-weight: 700;
-font-size: clamp(40px, 5vw, 65px);
-line-height: 120%;
-letter-spacing: -0.03em;
-color: #000000;
-align-self: stretch;
+    margin: 0;
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #000000;
+    align-self: stretch;
 }
 .description1 {
-margin: 0;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-font-size: 18px;
-line-height: 150%;
-color: #000000;
-max-width: 558px;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #000000;
+    max-width: 558px;
 }
 .headerImageContainer {
-flex: 1;
-min-width: 300px;
-max-width: 591px;
-flex-basis: 40%;
-order: 2;
+    flex: 1;
+    min-width: 300px;
+    max-width: 591px;
+    flex-basis: 40%;
+    order: 2;
 }
 .headerImage {
-display: block;
-width: 100%;
-height: auto;
-max-height: 388px;
-border-radius: 30px;
-object-fit: cover;
-background-color: #eee; /* Placeholder background */
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 388px;
+    border-radius: 30px;
+    object-fit: cover;
+    background-color: #eee; /* Placeholder background */
 }
 
 /* --- Section 2: Layout (Video Production) --- */
 .layoutSection {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: flex-start; /* Align items to the top */
-justify-content: center;
-padding: 95px 80px 65px;
-gap: 93px;
-background: #FFFFFF;
-box-sizing: border-box;
-margin-top: 0px;
-width: 100%;
-max-width: 1440px;
-margin-left: auto;
-margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center;
+    padding: 95px 80px 65px;
+    gap: 93px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    margin-top: 0px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .layoutImageContainer {
-flex: 1;
-min-width: 300px;
-max-width: 600px;
-flex-basis: 45%;
-order: 1;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    flex-basis: 45%;
+    order: 1;
 }
 .layoutImage {
-display: block;
-width: 100%;
-height: auto;
-max-height: 606px;
-border-radius: 30px;
-object-fit: cover;
-background-color: #ddd; /* Placeholder background */
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 606px;
+    border-radius: 30px;
+    object-fit: cover;
+    background-color: #ddd; /* Placeholder background */
 }
 .layoutContentContainer {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35px;
-flex: 1;
-min-width: 300px;
-max-width: 600px; /* Adjusted from 600px to match gap/padding */
-flex-basis: 45%;
-order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px; /* Adjusted from 600px to match gap/padding */
+    flex-basis: 45%;
+    order: 2;
 }
 .layoutIntroBlock {
-display: flex;
-flex-direction: column;
-gap: 26px;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
 }
 .heading2 {
-margin: 0;
-font-family: 'Evolventa', sans-serif;
-font-weight: 700;
-font-size: clamp(36px, 4vw, 48px);
-line-height: 120%; /* Was 64px */
-color: #000000;
+    margin: 0;
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 120%; /* Was 64px */
+    color: #000000;
 }
 .description2 {
-margin: 0;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-font-size: 16px; /* Reduced from 18px */
-line-height: 27px;
-letter-spacing: 0.01em;
-color: #000000;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px; /* Reduced from 18px */
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
 }
 .keyFeaturesTitle {
-margin: 0;
-font-family: 'Open Sans', sans-serif;
-font-weight: 700;
-font-size: 20px;
-line-height: 29px;
-letter-spacing: 0.01em;
-color: #000000;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    color: #000000;
 }
 .featuresList {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 26px;
-width: 100%;
-max-width: 586px; /* Ensure it doesn't overflow container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 26px;
+    width: 100%;
+    max-width: 586px; /* Ensure it doesn't overflow container */
 }
 .featureItem {
-width: 100%;
+    width: 100%;
 }
 .featureTitle {
-margin: 0 0 8px 0; /* Added bottom margin */
-font-family: 'Open Sans', sans-serif;
-font-weight: 700;
-font-size: 18px;
-line-height: 131%; /* 23.58px */
-letter-spacing: 0.01em;
-color: #000000;
+    margin: 0 0 8px 0; /* Added bottom margin */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 131%; /* 23.58px */
+    letter-spacing: 0.01em;
+    color: #000000;
 }
 .featureDescription {
-margin: 0;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%; /* 24px */
-letter-spacing: 0.01em;
-color: #555; /* Using a slightly lighter color for description \*/
-max-width: 551px;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.01em;
+    color: #555; /* Using a slightly lighter color for description */
+    max-width: 551px;
 }
+
 
 /* --- Section 3: Creative Direction --- */
 .creativeDirectionSection {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center; /* Vertically center align items */
-justify-content: center;
-padding: 80px 80px 65px; /* Adjusted padding */
-gap: 80px; /* Reduced gap \*/
-background: #FFFFFF;
-box-sizing: border-box;
-margin-top: 0px;
-width: 100%;
-max-width: 1440px;
-margin-left: auto;
-margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center align items */
+    justify-content: center;
+    padding: 80px 80px 65px; /* Adjusted padding */
+    gap: 80px; /* Reduced gap */
+    background: #FFFFFF;
+    box-sizing: border-box;
+    margin-top: 0px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .creativeContentContainer {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35px;
-flex: 1;
-min-width: 300px;
-max-width: 600px;
-flex-basis: 45%;
-order: 1; /* Text first */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    flex-basis: 45%;
+    order: 1; /* Text first */
 }
 .creativeIntroBlock {
-display: flex;
-flex-direction: column;
-gap: 26px;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
 }
 .heading3 {
-margin: 0;
-font-family: 'Evolventa', sans-serif;
-font-weight: 700;
-font-size: clamp(36px, 4vw, 48px);
-line-height: 120%; /* 64px */
-color: #000000;
+    margin: 0;
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 120%; /* 64px */
+    color: #000000;
 }
 .description3 {
-margin: 0;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-font-size: 16px; /* Reduced from 18px */
-line-height: 27px;
-letter-spacing: 0.01em;
-color: #000000;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px; /* Reduced from 18px */
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
 }
 /* Re-using featuresList styles, adding specific gap for creative section */
 .creativeFeaturesList {
-gap: 16px !important; /* Override default gap if needed */
+    gap: 16px !important; /* Override default gap if needed */
 }
 .creativeImageContainer {
-flex: 1;
-min-width: 300px;
-max-width: 600px;
-flex-basis: 45%;
-order: 2; /* Image second */
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    flex-basis: 45%;
+    order: 2; /* Image second */
 }
 .creativeImage {
-display: block;
-width: 100%;
-height: auto;
-max-height: 606px;
-border-radius: 30px;
-object-fit: cover;
-background-color: #ddd; /* Placeholder background \*/
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 606px;
+    border-radius: 30px;
+    object-fit: cover;
+    background-color: #ddd; /* Placeholder background */
 }
 
 /* --- Section 4: Post Production --- */
 .postProductionSection {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center; /* Vertically center align items */
-justify-content: center;
-padding: 80px 80px 112px; /* Adjusted padding \*/
-gap: 93px;
-background: #FFFFFF;
-box-sizing: border-box;
-margin-top: 0px;
-width: 100%;
-max-width: 1440px;
-margin-left: auto;
-margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center align items */
+    justify-content: center;
+    padding: 80px 80px 112px; /* Adjusted padding */
+    gap: 93px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    margin-top: 0px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .postProdImageContainer {
-flex: 1;
-min-width: 300px;
-max-width: 600px;
-flex-basis: 45%;
-order: 1; /* Image first */
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    flex-basis: 45%;
+    order: 1; /* Image first */
 }
 .postProdImage {
-display: block;
-width: 100%;
-height: auto;
-max-height: 606px;
-border-radius: 30px;
-object-fit: cover;
-background-color: #ddd; /* Placeholder background */
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 606px;
+    border-radius: 30px;
+    object-fit: cover;
+    background-color: #ddd; /* Placeholder background */
 }
 .postProdContentContainer {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35px;
-flex: 1;
-min-width: 300px;
-max-width: 587px; /* Specific width */
-flex-basis: 45%;
-order: 2; /* Text second */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 587px; /* Specific width */
+    flex-basis: 45%;
+    order: 2; /* Text second */
 }
 .postProdIntroBlock {
-display: flex;
-flex-direction: column;
-gap: 26px;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
 }
 .heading4 {
-margin: 0;
-font-family: 'Evolventa', sans-serif;
-font-weight: 700;
-font-size: clamp(36px, 4vw, 48px);
-line-height: 120%; /* 64px */
-color: #000000;
-max-width: 357px; /* Specific width for heading */
+    margin: 0;
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 120%; /* 64px */
+    color: #000000;
+    max-width: 357px; /* Specific width for heading */
 }
 .description4 {
-margin: 0;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-font-size: 16px; /* Reduced from 18px */
-line-height: 27px;
-letter-spacing: 0.01em;
-color: #000000;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px; /* Reduced from 18px */
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
 }
-/* Re-using featuresList styles \*/
+/* Re-using featuresList styles */
+
 
 /* --- Section 5: Pricing --- */
 .pricingSection {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 80px 64px 112px;
-gap: 60px;
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
-background-size: cover;
-background-position: center;
-box-sizing: border-box;
-margin-top: 0px;
-width: 100%;
-max-width: 1440px;
-margin-left: auto;
-margin-right: auto;
-position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 64px 112px;
+    gap: 60px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 0px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 .pricingTitle {
-font-family: 'Evolventa', sans-serif;
-font-weight: 700;
-font-size: clamp(36px, 4vw, 48px);
-line-height: 1.3;
-letter-spacing: 0.02em;
-color: #FFFFFF;
-text-align: center;
-max-width: 844px;
-margin: 0;
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 844px;
+    margin: 0;
 }
 
 .pricingCardsContainer {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: stretch;
-flex-wrap: wrap;
-gap: 40px;
-width: 100%;
-max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    max-width: 1300px;
 }
 
 .priceCard {
-box-sizing: border-box;
-width: 278px;
-background: #383636;
-border: 1px solid #FFFFFF;
-border-radius: 31px;
-padding: 30px 25px 40px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-min-height: 380px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    width: 278px;
+    background: #383636;
+    border: 1px solid #FFFFFF;
+    border-radius: 31px;
+    padding: 30px 25px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 380px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .priceCard:hover {
-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .highlightedCard {
-border: 2px solid #99EA48;
-box-shadow: 0px 0px 19px #99EA48;
-transform: scale(1.05);
+    border: 2px solid #99EA48;
+    box-shadow: 0px 0px 19px #99EA48;
+    transform: scale(1.05);
 }
 .highlightedCard:hover {
-transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05) translateY(-5px);
 }
 
 .planName {
-font-family: 'Caveat', cursive;
-font-weight: 700;
-font-size: clamp(50px, 6vw, 65px);
-line-height: 1.1;
-color: #A9F160;
-margin: 0 0 10px 0;
-min-height: 70px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: clamp(50px, 6vw, 65px);
+    line-height: 1.1;
+    color: #A9F160;
+    margin: 0 0 10px 0;
+    min-height: 70px;
 }
 
 .planPrice {
-font-family: 'Roboto', sans-serif;
-font-weight: 600;
-font-size: 20px;
-line-height: 23px;
-letter-spacing: -0.01em;
-color: #FFFFFF;
-margin: 0 0 30px 0;
-min-height: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    margin: 0 0 30px 0;
+    min-height: 23px;
 }
 
 .planFeatures {
-list-style: none;
-padding: 0;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-align: left;
-width: 100%;
-max-width: 215px;
-flex-grow: 1;
-position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 215px;
+    flex-grow: 1;
+    position: relative;
 }
 
 .planFeatureItem {
-font-family: 'Roboto', sans-serif;
-font-weight: 300;
-font-size: 16px;
-line-height: 1.4;
-color: #FFFFFF;
-width: 100%;
-position: relative;
-padding-left: 25px;
-padding-bottom: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    width: 100%;
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 18px;
 }
 
-.planFeatureItem:before {
-content: '';
-position: absolute;
-left: 0px;
-top: calc( (1.4 \* 1em) / 2 - 5px );
-width: 10px;
-height: 10px;
-background: #A9F160;
-border-radius: 50%;
-z-index: 2;
+.planFeatureItem::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: calc( (1.4 * 1em) / 2 - 5px );
+    width: 10px;
+    height: 10px;
+    background: #A9F160;
+    border-radius: 50%;
+    z-index: 2;
 }
 
-.planFeatureItem:after {
-content: '';
-position: absolute;
-left: 4px;
-top: calc( (1.4 \* 1em) / 2 + 5px);
-width: 2px;
-height: calc(100% - 5px);
-background: #646464; /* Consistent color \*/
-z-index: 1;
+.planFeatureItem::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: calc( (1.4 * 1em) / 2 + 5px);
+    width: 2px;
+    height: calc(100% - 5px);
+    background: #646464; /* Consistent color */
+    z-index: 1;
 }
 
 .planFeatures li:last-child {
-padding-bottom: 0;
+    padding-bottom: 0;
 }
-.planFeatures li\:last-child::after {
-display: none;
+.planFeatures li:last-child::after {
+    display: none;
 }
 
 /* --- UPDATED: Styles for Ready to Work Section (Based on Figma Spec) --- */
 .ctaContainer {
-display: flex;
-flex-direction: row; /* Text and button side-by-side */
-justify-content: center; /* Center items horizontally */
-align-items: center; /* Center items vertically */
-flex-wrap: wrap; /* Allow wrapping on small screens */
-/* Large gap from Figma - adjust for responsiveness */
-gap: 60px 300px;  /* Row gap (for wrap), Column gap (main gap) */
-margin-top: 60px; /* Space above this section (adjust as needed) */
-width: 100%; /* Take full width to allow centering/wrapping */
-max-width: 1074px; /* Max width from Figma (used for centering context) */
-padding: 20px 0; /* Add some vertical padding \*/
+    display: flex;
+    flex-direction: row; /* Text and button side-by-side */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    /* Large gap from Figma - adjust for responsiveness */
+    gap: 60px 300px;  /* Row gap (for wrap), Column gap (main gap) */
+    margin-top: 60px; /* Space above this section (adjust as needed) */
+    width: 100%; /* Take full width to allow centering/wrapping */
+    max-width: 1074px; /* Max width from Figma (used for centering context) */
+    padding: 20px 0; /* Add some vertical padding */
 }
 
 .ctaText {
-/* Styles from Figma spec */
-font-family: 'Plus Jakarta Sans', sans-serif;
-font-weight: 600;
-font-size: clamp(28px, 4vw, 40px); /* Responsive font size */
-line-height: 1.3; /* 130% */
-letter-spacing: -0.03em;
-color: #FFFFFF;
-margin: 0; /* Remove default margin */
-flex-shrink: 0; /* Prevent text from shrinking too much */
-text-align: center; /* Center text if it wraps \*/
+    /* Styles from Figma spec */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 40px); /* Responsive font size */
+    line-height: 1.3; /* 130% */
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin: 0; /* Remove default margin */
+    flex-shrink: 0; /* Prevent text from shrinking too much */
+    text-align: center; /* Center text if it wraps */
 }
 
 .ctaButton {
-  /* Layout */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  background: #FFFFFF;
-  border-radius: 70px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  flex-shrink: 0;
+    /* Styles for button Frame 427320691 */
+    display: inline-flex; /* Use inline-flex for alignment */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px; /* Padding from Figma */
+    /* Gap inside button (ignored as no icon specified) gap: 42px; */
+    background: #FFFFFF; /* Background from Figma */
+    border-radius: 70px; /* Border-radius from Figma */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Prevent button shrinking */
 
-  /* Text */
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  color: #010205;
-  text-decoration: none;
-  white-space: nowrap;
+    /* Text styles from Figma spec (Get Started) */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4; /* 140% */
+    letter-spacing: -0.02em;
+    color: #010205; /* Text color from Figma */
+    text-decoration: none; /* If using <a> tag */
+    white-space: nowrap; /* Prevent button text wrapping */
 }
 
 .ctaButton:hover {
-background-color: #f0f0f0; /* Slightly darker on hover */
-transform: scale(1.03); /* Slight zoom effect */
+    background-color: #f0f0f0; /* Slightly darker on hover */
+    transform: scale(1.03); /* Slight zoom effect */
 }
-/* --- End UPDATED Styles --- \*/
+/* --- End UPDATED Styles --- */
+
 
 /* --- Footer Styles --- */
 .footerSection {
-padding: 60px 80px;
-background-color: #FFFFFF; /* Footer on white background */
-margin-top: 0; /* No margin needed if pricing section is last */
-border-top: 1px solid #eee; /* Subtle separator \*/
+    padding: 60px 80px;
+    background-color: #FFFFFF; /* Footer on white background */
+    margin-top: 0; /* No margin needed if pricing section is last */
+    border-top: 1px solid #eee; /* Subtle separator */
 }
 
 .footerContainer {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between; /* Space out content */
-gap: 60px 40px; /* Row gap, Column gap */
-max-width: 1280px; /* Limit width */
-margin: 0 auto; /* Center container \*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out content */
+    gap: 60px 40px; /* Row gap, Column gap */
+    max-width: 1280px; /* Limit width */
+    margin: 0 auto; /* Center container */
 }
 
 .footerAbout {
-flex: 1; /* Allow flexible width */
-flex-basis: 300px; /* Minimum width before wrapping */
-min-width: 250px; /* Absolute minimum */
-display: flex;
-flex-direction: column;
-gap: 24px; /* Spacing within the about section */
-max-width: 534px; /* Limit width \*/
+    flex: 1; /* Allow flexible width */
+    flex-basis: 300px; /* Minimum width before wrapping */
+    min-width: 250px; /* Absolute minimum */
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Spacing within the about section */
+    max-width: 534px; /* Limit width */
 }
 
 .footerLogo {
-width: 72px; /* Set logo size \*/
-height: auto;
-object-fit: contain;
+    width: 72px; /* Set logo size */
+    height: auto;
+    object-fit: contain;
 }
 
 .footerDescription {
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-color: #9B9B9C; /* Grey text \*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #9B9B9C; /* Grey text */
 }
 
 .footerSocialLinks {
-display: flex;
-gap: 12px; /* Space between icons \*/
+    display: flex;
+    gap: 12px; /* Space between icons */
 }
 
 .footerSocialLink {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 34px; /* Icon size */
-height: 34px; /* Icon size */
-background: #e7e7e7; /* Icon background */
-border-radius: 50%; /* Make it circular */
-color: #192031; /* Icon color */
-font-size: 16px; /* Adjust if using font icons */
-text-decoration: none;
-transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px; /* Icon size */
+    height: 34px; /* Icon size */
+    background: #e7e7e7; /* Icon background */
+    border-radius: 50%; /* Make it circular */
+    color: #192031; /* Icon color */
+    font-size: 16px; /* Adjust if using font icons */
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
 }
 .footerSocialLink:hover {
-background-color: #192031; /* Darker background on hover */
-color: #FFFFFF; /* White icon on hover \*/
+    background-color: #192031; /* Darker background on hover */
+    color: #FFFFFF; /* White icon on hover */
 }
 
 /* Placeholder for icons if using mask */
 .iconPlaceholder {
-width: 1em;
-height: 1em;
-background-color: currentColor;
-mask-size: contain;
-mask-repeat: no-repeat;
-mask-position: center;
-/* Example: mask-image: url('/icons/facebook.svg'); \*/
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    /* Example: mask-image: url('/icons/facebook.svg'); */
 }
 
+
 .footerNavContainer {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 60px 80px; /* Row gap, Column gap */
-flex-grow: 1; /* Allow to take remaining space */
-justify-content: flex-start; /* Align groups to the start \*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px 80px; /* Row gap, Column gap */
+    flex-grow: 1; /* Allow to take remaining space */
+    justify-content: flex-start; /* Align groups to the start */
 }
 
 .footerNavGroup {
-display: flex;
-flex-direction: column;
-gap: 16px; /* Space between title and links */
-min-width: 100px; /* Minimum width for nav groups \*/
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between title and links */
+    min-width: 100px; /* Minimum width for nav groups */
 }
 
 .footerNavTitle {
-font-family: 'Roboto', sans-serif;
-font-weight: 600;
-font-size: 18px;
-line-height: 21px;
-color: #192031; /* Dark title */
-margin-bottom: 10px; /* Space below title \*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: #192031; /* Dark title */
+    margin-bottom: 10px; /* Space below title */
 }
 
 .footerNavList, .footerContactList {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex;
-flex-direction: column;
-gap: 12px; /* Space between links \*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Space between links */
 }
 
 .footerNavLink {
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.5;
-color: #9B9B9C; /* Grey link color */
-text-decoration: none;
-transition: color 0.2s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #9B9B9C; /* Grey link color */
+    text-decoration: none;
+    transition: color 0.2s;
 }
 .footerNavLink:hover {
-color: #000000; /* Darken on hover */
+    color: #000000; /* Darken on hover */
 }
-/* Specific styles for contact list links if needed \*/
+/* Specific styles for contact list links if needed */
 .footerContactList .footerNavLink {
-color: #9B9B9C;
+    color: #9B9B9C;
 }
 .footerContactList .footerNavLink:hover {
-color: #000000;
+    color: #000000;
 }
 
 /* Make non-link contact info look similar but not clickable */
 .footerContactList span.footerNavLink {
-cursor: default;
+    cursor: default;
 }
 
 .footerContactItem {
-display: flex;
-align-items: flex-start; /* Align icon with top of text */
-gap: 12px; /* Space between icon and text */
+    display: flex;
+    align-items: flex-start; /* Align icon with top of text */
+    gap: 12px; /* Space between icon and text */
 }
 .footerContactItem .iconPlaceholder {
-font-size: 18px; /* Icon size */
-color: #192031; /* Icon color */
-margin-top: 2px; /* Align icon slightly */
-flex-shrink: 0; /* Prevent icon from shrinking \*/
+    font-size: 18px; /* Icon size */
+    color: #192031; /* Icon color */
+    margin-top: 2px; /* Align icon slightly */
+    flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .footerCopyright {
-width: 100%; /* Take full width */
-text-align: center; /* Center copyright text */
-padding-top: 40px; /* Space above copyright */
-margin-top: 40px; /* Ensure separation */
-border-top: 1px solid #eee; /* Separator line */
-font-size: 14px;
-color: #9B9B9C; /* Grey text \*/
+    width: 100%; /* Take full width */
+    text-align: center; /* Center copyright text */
+    padding-top: 40px; /* Space above copyright */
+    margin-top: 40px; /* Ensure separation */
+    border-top: 1px solid #eee; /* Separator line */
+    font-size: 14px;
+    color: #9B9B9C; /* Grey text */
 }
 
-/* --- Media Queries --- \*/
+
+/* --- Media Queries --- */
 
 @media (max-width: 1350px) {
-/* Adjust pricing cards container for slightly smaller screens */
-.pricingCardsContainer {
-gap: 30px; /* Reduce gap */
-max-width: 90%; /* Allow slightly more width */
-justify-content: space-around; /* Distribute space */
-}
-.priceCard {
-/* Use clamp for flexible width */
-width: clamp(260px, 45%, 278px); /* Min, Preferred (as % of parent), Max */
-flex-basis: auto; /* Allow flexbox to control basis */
-padding: 25px 20px 35px; /* Adjust padding */
-min-height: 360px; /* Adjust min height */
-}
-.highlightedCard {
-transform: scale(1.02); /* Slightly reduce scale \*/
+    /* Adjust pricing cards container for slightly smaller screens */
+    .pricingCardsContainer {
+        gap: 30px; /* Reduce gap */
+        max-width: 90%; /* Allow slightly more width */
+        justify-content: space-around; /* Distribute space */
+    }
+    .priceCard {
+        /* Use clamp for flexible width */
+        width: clamp(260px, 45%, 278px); /* Min, Preferred (as % of parent), Max */
+        flex-basis: auto; /* Allow flexbox to control basis */
+        padding: 25px 20px 35px; /* Adjust padding */
+        min-height: 360px; /* Adjust min height */
+    }
+    .highlightedCard {
+        transform: scale(1.02); /* Slightly reduce scale */
+    }
+
+    /* Adjust CTA gap */
+    .ctaContainer {
+        gap: 60px 200px; /* Reduce main gap */
+    }
 }
 
-/* Adjust CTA gap */
-.ctaContainer {
-    gap: 60px 200px; /* Reduce main gap */
-}
-
-}
 
 @media (max-width: 960px) {
-/* Tablet adjustments \*/
+    /* Tablet adjustments */
 
-/* General Section Padding */
-.headerSection, .layoutSection, .creativeDirectionSection, .postProductionSection, .pricingSection, .footerSection {
-    padding-left: 40px;
-    padding-right: 40px;
-    gap: 40px; /* Reduce gap */
-    max-width: none; /* Allow full width */
-}
-.footerSection { padding: 60px 40px; }
+    /* General Section Padding */
+    .headerSection, .layoutSection, .creativeDirectionSection, .postProductionSection, .pricingSection, .footerSection {
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 40px; /* Reduce gap */
+        max-width: none; /* Allow full width */
+    }
+    .footerSection { padding: 60px 40px; }
 
-.pricingSection {
-    padding: 60px 40px 80px;
-    gap: 40px;
-    border-radius: 20px; /* Add some rounding */
-}
-.pricingTitle { margin-top: 0; }
+    .pricingSection {
+        padding: 60px 40px 80px;
+        gap: 40px;
+        border-radius: 20px; /* Add some rounding */
+    }
+    .pricingTitle { margin-top: 0; }
 
-/* Header stack */
-.headerSection { text-align: center; padding-top: 80px; padding-bottom: 80px; }
-.headerContentContainer { align-items: center; order: 1; flex-basis: 100%; }
-.headerImageContainer { order: 2; flex-basis: 80%; max-width: 500px; }
-.taglineWrapper { justify-content: center; }
+    /* Header stack */
+    .headerSection { text-align: center; padding-top: 80px; padding-bottom: 80px; }
+    .headerContentContainer { align-items: center; order: 1; flex-basis: 100%; }
+    .headerImageContainer { order: 2; flex-basis: 80%; max-width: 500px; }
+    .taglineWrapper { justify-content: center; }
 
-/* Layout stack */
-.layoutSection { padding-top: 60px; padding-bottom: 60px; }
-.layoutImageContainer { order: 1; flex-basis: 100%; max-width: 500px; }
-.layoutContentContainer { order: 2; flex-basis: 100%; max-width: 100%; align-items: center; text-align: center; }
-.layoutIntroBlock, .featuresList { align-items: center; }
-.featuresList { max-width: 90%; }
+    /* Layout stack */
+    .layoutSection { padding-top: 60px; padding-bottom: 60px; }
+    .layoutImageContainer { order: 1; flex-basis: 100%; max-width: 500px; }
+    .layoutContentContainer { order: 2; flex-basis: 100%; max-width: 100%; align-items: center; text-align: center; }
+    .layoutIntroBlock, .featuresList { align-items: center; }
+    .featuresList { max-width: 90%; }
 
-/* Creative stack */
-.creativeDirectionSection { padding-top: 60px; padding-bottom: 60px; }
-.creativeContentContainer { order: 1; flex-basis: 100%; max-width: 100%; align-items: center; text-align: center; }
-.creativeIntroBlock { align-items: center; }
-.creativeImageContainer { order: 2; flex-basis: 100%; max-width: 500px; }
-.creativeContentContainer .featuresList { align-items: center; }
+    /* Creative stack */
+    .creativeDirectionSection { padding-top: 60px; padding-bottom: 60px; }
+    .creativeContentContainer { order: 1; flex-basis: 100%; max-width: 100%; align-items: center; text-align: center; }
+    .creativeIntroBlock { align-items: center; }
+    .creativeImageContainer { order: 2; flex-basis: 100%; max-width: 500px; }
+    .creativeContentContainer .featuresList { align-items: center; }
 
-/* Post-Prod stack */
-.postProductionSection { padding-top: 60px; padding-bottom: 60px; }
-.postProdImageContainer { order: 1; flex-basis: 100%; max-width: 500px; }
-.postProdContentContainer { order: 2; flex-basis: 100%; max-width: 100%; align-items: center; text-align: center; }
-.postProdIntroBlock { align-items: center; }
-.postProdContentContainer .featuresList { align-items: center; }
+    /* Post-Prod stack */
+    .postProductionSection { padding-top: 60px; padding-bottom: 60px; }
+    .postProdImageContainer { order: 1; flex-basis: 100%; max-width: 500px; }
+    .postProdContentContainer { order: 2; flex-basis: 100%; max-width: 100%; align-items: center; text-align: center; }
+    .postProdIntroBlock { align-items: center; }
+    .postProdContentContainer .featuresList { align-items: center; }
 
-/* Pricing Cards adjust */
-.pricingCardsContainer {
-    max-width: 100%; /* Allow container to be full width */
-}
+    /* Pricing Cards adjust */
+    .pricingCardsContainer {
+        max-width: 100%; /* Allow container to be full width */
+    }
 
-/* CTA Adjustments */
-.ctaContainer {
-    flex-direction: column; /* Stack text and button */
-    gap: 30px; /* Adjust gap for column layout */
-    margin-top: 50px;
-    max-width: 90%; /* Limit width */
-}
-.ctaText {
-    font-size: clamp(26px, 5vw, 36px); /* Adjust font size */
-}
+    /* CTA Adjustments */
+    .ctaContainer {
+        flex-direction: column; /* Stack text and button */
+        gap: 30px; /* Adjust gap for column layout */
+        margin-top: 50px;
+        max-width: 90%; /* Limit width */
+    }
+    .ctaText {
+        font-size: clamp(26px, 5vw, 36px); /* Adjust font size */
+    }
 
-/* Footer adjust */
-.footerContainer {
-    justify-content: space-around; /* Space out footer items */
-    gap: 40px;
-}
-.footerNavContainer {
-    justify-content: space-around; /* Space out nav groups */
-    gap: 40px 50px;
-    width: 100%; /* Ensure nav takes full width */
-}
-
+    /* Footer adjust */
+    .footerContainer {
+        justify-content: space-around; /* Space out footer items */
+        gap: 40px;
+    }
+    .footerNavContainer {
+        justify-content: space-around; /* Space out nav groups */
+        gap: 40px 50px;
+        width: 100%; /* Ensure nav takes full width */
+    }
 }
 
 @media (max-width: 600px) {
-/* Mobile adjustments \*/
+    /* Mobile adjustments */
 
-/* General Section Padding & Gaps */
-.headerSection, .layoutSection, .creativeDirectionSection, .postProductionSection, .pricingSection, .footerSection {
-    padding: 60px 20px; /* Reduce padding */
-    gap: 30px; /* Reduce gap */
-}
-.footerSection { padding: 40px 20px; }
+    /* General Section Padding & Gaps */
+    .headerSection, .layoutSection, .creativeDirectionSection, .postProductionSection, .pricingSection, .footerSection {
+        padding: 60px 20px; /* Reduce padding */
+        gap: 30px; /* Reduce gap */
+    }
+    .footerSection { padding: 40px 20px; }
 
-.pricingSection {
-    padding: 50px 20px 60px;
-    gap: 30px;
-    border-radius: 15px; /* Slightly smaller radius */
-}
-.pricingTitle { margin-top: 0; }
+    .pricingSection {
+        padding: 50px 20px 60px;
+        gap: 30px;
+        border-radius: 15px; /* Slightly smaller radius */
+    }
+    .pricingTitle { margin-top: 0; }
 
-/* Font Size Adjustments */
-.heading1 { font-size: clamp(36px, 8vw, 42px); }
-.description1 { font-size: 16px; }
-.heading2, .heading3, .heading4 { font-size: clamp(32px, 7vw, 38px); }
-.description2, .description3, .description4 { font-size: 15px; line-height: 1.6; }
-.keyFeaturesTitle { font-size: 18px; }
-.featureTitle { font-size: 17px; }
-.featureDescription { font-size: 15px; }
-.pricingTitle { font-size: clamp(30px, 7vw, 36px); }
-.planName { font-size: clamp(45px, 10vw, 55px); }
-.planPrice { font-size: 18px; }
-.planFeatureItem { font-size: 15px; }
-.footerDescription { font-size: 13px; }
-.footerNavTitle { font-size: 16px; }
-.footerNavLink { font-size: 13px; }
+    /* Font Size Adjustments */
+    .heading1 { font-size: clamp(36px, 8vw, 42px); }
+    .description1 { font-size: 16px; }
+    .heading2, .heading3, .heading4 { font-size: clamp(32px, 7vw, 38px); }
+    .description2, .description3, .description4 { font-size: 15px; line-height: 1.6; }
+    .keyFeaturesTitle { font-size: 18px; }
+    .featureTitle { font-size: 17px; }
+    .featureDescription { font-size: 15px; }
+    .pricingTitle { font-size: clamp(30px, 7vw, 36px); }
+    .planName { font-size: clamp(45px, 10vw, 55px); }
+    .planPrice { font-size: 18px; }
+    .planFeatureItem { font-size: 15px; }
+    .footerDescription { font-size: 13px; }
+    .footerNavTitle { font-size: 16px; }
+    .footerNavLink { font-size: 13px; }
 
 
-/* Further Content Alignment */
-.layoutContentContainer, .creativeContentContainer, .postProdContentContainer { gap: 30px; }
-.layoutIntroBlock, .creativeIntroBlock, .postProdIntroBlock { gap: 15px; }
-.featuresList { gap: 20px; max-width: 100%;}
-.creativeFeaturesList { gap: 16px !important; }
+    /* Further Content Alignment */
+    .layoutContentContainer, .creativeContentContainer, .postProdContentContainer { gap: 30px; }
+    .layoutIntroBlock, .creativeIntroBlock, .postProdIntroBlock { gap: 15px; }
+    .featuresList { gap: 20px; max-width: 100%;}
+    .creativeFeaturesList { gap: 16px !important; }
 
-/* Pricing Card Stacking */
-.pricingCardsContainer {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards */
-    gap: 30px;
-}
-.priceCard {
-    width: 90%; /* Make cards wider */
-    max-width: 320px; /* Limit max width */
-    min-height: auto; /* Remove min height */
-}
-.highlightedCard {
-    transform: scale(1); /* Reset scale */
-}
-.highlightedCard:hover {
-    transform: translateY(-5px); /* Keep hover effect */
-}
-/* Adjust feature list layout inside stacked cards */
-.planFeatures {
-    align-items: center; /* Center list items container */
-    text-align: center; /* Center text */
-}
-.planFeatureItem {
-    text-align: left; /* Keep text left aligned */
-    justify-content: flex-start; /* Align bullet and text */
-    max-width: 220px; /* Limit width of feature text */
-    padding-left: 0; /* Remove padding, use inline bullet */
-    padding-bottom: 15px; /* Adjust spacing */
-}
-/* Make bullet inline */
-.planFeatureItem::before {
-    position: static; /* Remove absolute positioning */
-    display: inline-block; /* Allow inline display */
-    vertical-align: middle; /* Align with text */
-    margin-right: 10px; /* Space between bullet and text */
-    margin-top: 0; /* Reset top alignment */
-    top: auto; left: auto; /* Reset positioning */
-}
-/* Hide vertical line */
-.planFeatureItem::after {
-    display: none;
-}
-.planFeatures li:last-child {
-    padding-bottom: 0; /* Remove padding on last item */
-}
+    /* Pricing Card Stacking */
+    .pricingCardsContainer {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+        gap: 30px;
+    }
+    .priceCard {
+        width: 90%; /* Make cards wider */
+        max-width: 320px; /* Limit max width */
+        min-height: auto; /* Remove min height */
+    }
+    .highlightedCard {
+        transform: scale(1); /* Reset scale */
+    }
+    .highlightedCard:hover {
+        transform: translateY(-5px); /* Keep hover effect */
+    }
+    /* Adjust feature list layout inside stacked cards */
+    .planFeatures {
+        align-items: center; /* Center list items container */
+        text-align: center; /* Center text */
+    }
+    .planFeatureItem {
+        text-align: left; /* Keep text left aligned */
+        justify-content: flex-start; /* Align bullet and text */
+        max-width: 220px; /* Limit width of feature text */
+        padding-left: 0; /* Remove padding, use inline bullet */
+        padding-bottom: 15px; /* Adjust spacing */
+    }
+    /* Make bullet inline */
+    .planFeatureItem::before {
+        position: static; /* Remove absolute positioning */
+        display: inline-block; /* Allow inline display */
+        vertical-align: middle; /* Align with text */
+        margin-right: 10px; /* Space between bullet and text */
+        margin-top: 0; /* Reset top alignment */
+        top: auto; left: auto; /* Reset positioning */
+    }
+    /* Hide vertical line */
+    .planFeatureItem::after {
+        display: none;
+    }
+    .planFeatures li:last-child {
+        padding-bottom: 0; /* Remove padding on last item */
+    }
 
-/* CTA adjustments for mobile */
-.ctaContainer {
-    flex-direction: column; /* Ensure stacking */
-    gap: 20px; /* Adjust gap */
-    margin-top: 40px; /* Adjust margin */
-    max-width: 100%; /* Allow full width */
-    padding: 10px 0; /* Adjust padding */
-}
+    /* CTA adjustments for mobile */
+    .ctaContainer {
+        flex-direction: column; /* Ensure stacking */
+        gap: 20px; /* Adjust gap */
+        margin-top: 40px; /* Adjust margin */
+        max-width: 100%; /* Allow full width */
+        padding: 10px 0; /* Adjust padding */
+    }
 
-.ctaText {
-    font-size: clamp(22px, 6vw, 26px); /* Adjust font size */
-}
+    .ctaText {
+        font-size: clamp(22px, 6vw, 26px); /* Adjust font size */
+    }
 
-.ctaButton {
-    padding: 14px 28px; /* Adjust padding */
-    font-size: 15px; /* Adjust font size */
-}
-/* End CTA mobile adjustments */
+    .ctaButton {
+        padding: 14px 28px; /* Adjust padding */
+        font-size: 15px; /* Adjust font size */
+    }
+    /* End CTA mobile adjustments */
 
-/* Footer Stacking */
-.footerContainer {
-    flex-direction: column; /* Stack footer sections */
-    align-items: center; /* Center sections */
-    text-align: center; /* Center text */
-    gap: 35px;
-}
-.footerAbout {
-    align-items: center; /* Center items within about section */
-    max-width: 100%;
-}
-.footerSocialLinks {
-    justify-content: center; /* Center social icons */
-}
-.footerNavContainer {
-    flex-direction: column; /* Stack nav groups */
-    align-items: center; /* Center nav groups */
-    gap: 30px;
-    width: 100%;
-}
-.footerNavGroup {
-    align-items: center; /* Center items within nav group */
-    gap: 10px;
-}
-.footerNavList, .footerContactList {
-    gap: 8px; /* Reduce gap between links */
-}
-.footerContactItem {
-    justify-content: center; /* Center contact items */
-    text-align: left; /* Keep contact details text left aligned */
-}
 
+    /* Footer Stacking */
+    .footerContainer {
+        flex-direction: column; /* Stack footer sections */
+        align-items: center; /* Center sections */
+        text-align: center; /* Center text */
+        gap: 35px;
+    }
+    .footerAbout {
+        align-items: center; /* Center items within about section */
+        max-width: 100%;
+    }
+    .footerSocialLinks {
+        justify-content: center; /* Center social icons */
+    }
+    .footerNavContainer {
+        flex-direction: column; /* Stack nav groups */
+        align-items: center; /* Center nav groups */
+        gap: 30px;
+        width: 100%;
+    }
+    .footerNavGroup {
+        align-items: center; /* Center items within nav group */
+        gap: 10px;
+    }
+    .footerNavList, .footerContactList {
+        gap: 8px; /* Reduce gap between links */
+    }
+    .footerContactItem {
+        justify-content: center; /* Center contact items */
+        text-align: left; /* Keep contact details text left aligned */
+    }
 }
