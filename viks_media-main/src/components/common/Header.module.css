@@ -342,7 +342,7 @@
   position: relative;
 }
 
-/* Кнопка “Services” — использует .navItem, поэтому без дополнительного сброса */
+/* Кнопка “Services” — использует .navItem */
 .servicesDropdown .navItem {
   display: inline-flex;
   align-items: center;
@@ -357,13 +357,14 @@
   border-right: 5px solid transparent;
   border-top: 6px solid currentColor;
   transition: transform 0.2s ease;
+  margin-left: 4px;
 }
 
 /* Сам список, скрыт по умолчанию */
 .dropdownMenu {
   display: none;
   position: absolute;
-  top: calc(100% + 4px);
+  top: 100%;        /* прилипает прямо под кнопку */
   left: 0;
   list-style: none;
   margin: 0;
@@ -391,8 +392,9 @@
   background-color: #f5f5f5;
 }
 
-/* Показать меню и перевернуть стрелку при hover */
-.servicesDropdown:hover .dropdownMenu {
+/* Показать меню и вращать стрелку при наведении на кнопку или на само меню */
+.servicesDropdown:hover .dropdownMenu,
+.servicesDropdown .dropdownMenu:hover {
   display: block;
 }
 .servicesDropdown:hover .arrow {
