@@ -6,7 +6,7 @@ import styles from './ServicePage.module.css'
 export const generateStaticParams = () =>
   services.map((s) => ({ slug: s.slug }))
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
+export default async function ServicePage({ params }: { params: { slug: string } }) {
   const service = services.find((s: Service) => s.slug === params.slug)
   if (!service) return notFound()
 
