@@ -1,3 +1,4 @@
+// src/app/services/[slug]/page.tsx
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import services, { Service } from '@/data/services'
@@ -13,7 +14,6 @@ export default function ServicePage(props: any) {
 
   return (
     <div className={styles.pageContainer}>
-
       {/* Header */}
       <section className={styles.headerSection}>
         <div className={styles.headerContentContainer}>
@@ -112,9 +112,7 @@ export default function ServicePage(props: any) {
               {p.price && <p className={styles.planPrice}>{p.price}</p>}
               <ul className={styles.planFeatures}>
                 {p.features.map((feat, j) => (
-                  <li key={j} className={styles.planFeatureItem}>
-                    {feat}
-                  </li>
+                  <li key={j} className={styles.planFeatureItem}>{feat}</li>
                 ))}
               </ul>
             </div>
@@ -122,12 +120,9 @@ export default function ServicePage(props: any) {
         </div>
         <div className={styles.ctaContainer}>
           <p className={styles.ctaText}>Ready to work with us?</p>
-          <a href="/contact-us" className={styles.ctaButton}>
-            Get Started
-          </a>
+          <a href="/contact-us" className={styles.ctaButton}>Get Started</a>
         </div>
       </section>
-
     </div>
   )
 }
