@@ -736,7 +736,7 @@
 
 /* --- Media Queries --- */
 
-@media (max-width: 1500px) {
+@media (max-width: 1350) {
     /* Adjust pricing cards container for slightly smaller screens */
     .pricingCardsContainer {
         gap: 30px; /* Reduce gap */
@@ -761,7 +761,7 @@
 }
 
 
-@media (max-width: 1067px) {
+@media (max-width: 960px) {
     /* Tablet adjustments */
 
     /* General Section Padding */
@@ -835,7 +835,7 @@
     }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 600px) {
     /* Mobile adjustments */
 
     /* General Section Padding & Gaps */
