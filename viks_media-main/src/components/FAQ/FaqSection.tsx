@@ -18,8 +18,8 @@ const faqData: FaqData[] = [
     },
     {
         id: 'q2',
-        question: 'How can digital marketing help improve my website\'s visibility?',
-        answer: 'Through strategies like Search Engine Optimization (SEO), content marketing, and paid advertising (PPC), digital marketing increases your website\'s ranking in search results, making it easier for potential customers to find you online.',
+        question: 'Which industries does VIKS specialize in?',
+        answer: 'Our core expertise lies in tech startups, SaaS, e‑commerce, corporate events and B2B services. We leverage industry insights to craft messaging and visuals that resonate with your target audience.',
     },
     {
         id: 'q3',
