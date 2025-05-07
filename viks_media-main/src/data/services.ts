@@ -115,4 +115,57 @@ const services: Service[] = [
       },
       {
         title: 'Color Grading',
-        description: 'Профессиональная цветокоррекция для выдерж
+        description: 'Профессиональная цветокоррекция для выдержанного стиля.'
+      },
+      {
+        title: 'Sound Design',
+        description: 'Создание звуковой атмосферы и микширование.'
+      }
+    ],
+
+    // Section 5
+    pricingTitle: 'Our Pricing Plans',
+    pricingPlans: [
+      {
+        name: 'Starter',
+        price: '$1500',
+        features: [
+          'Up to 5 hours of filming',
+          '3 edited social media videos',
+          'Basic editing (color, cut, captions)'
+        ]
+      },
+      {
+        name: 'Basic',
+        price: '$2750',
+        highlighted: true,
+        features: [
+          'Up to 15 hours of filming',
+          '6 fully edited videos',
+          'Story & concept support'
+        ]
+      },
+      {
+        name: 'Pro',
+        price: '$4500',
+        features: [
+          'Up to 30 hours of production',
+          '10+ high‑production videos',
+          'Motion graphics & advanced editing'
+        ]
+      },
+      {
+        name: 'A‑la Carte',
+        features: [
+          'Custom hours & video count',
+          'Any level of post‑production',
+          'Platform‑optimized exports'
+        ]
+      }
+    ]
+  },
+
+  // Добавьте аналогичные объекты для 'social-media-management', 'content-strategy' и т.д.
+]
+
+export default services
