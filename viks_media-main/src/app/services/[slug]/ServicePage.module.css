@@ -711,7 +711,7 @@ font-size: 14px;
 color: #9B9B9C; /* Grey text \*/
 }
 
-/\* --- Media Queries --- \*/
+/* --- Media Queries --- \*/
 
 @media (max-width: 1350px) {
 /* Adjust pricing cards container for slightly smaller screens */
