@@ -15,31 +15,31 @@ export interface PricingPlan {
 export interface Service {
   slug: string
 
-  // Section 1 (Header)
+  // Section 1 (Header)
   tagline: string
   title: string
   headerImg: string
   headerDescription: string
 
-  // Section 2 (Layout / Video Production or аналог)
+  // Section 2 (Layout)
   layoutImg: string
   layoutTitle: string
   layoutDescription: string
   layoutFeatures: Feature[]
 
-  // Section 3 (Creative Direction)
+  // Section 3 (Creative Direction)
   creativeImg: string
   creativeTitle: string
   creativeDescription: string
   creativeFeatures: Feature[]
 
-  // Section 4 (Post Production)
+  // Section 4 (Post Production)
   postProdImg: string
   postProdTitle: string
   postProdDescription: string
   postProdFeatures: Feature[]
 
-  // Section 5 (Pricing)
+  // Section 5 (Pricing)
   pricingTitle: string
   pricingPlans: PricingPlan[]
 }
@@ -47,15 +47,11 @@ export interface Service {
 const services: Service[] = [
   {
     slug: 'video-production',
-
-    // Section 1
     tagline: 'Engage and Inspire your Audience',
     title: 'Video Production',
     headerImg: '/images/services/video-header.png',
     headerDescription:
       'End‑to‑end video production: from concept and scripting through shooting, editing, color grading and final delivery.',
-
-    // Section 2
     layoutImg: '/images/services/video-layout.png',
     layoutTitle: 'Our Process',
     layoutDescription:
@@ -64,26 +60,24 @@ const services: Service[] = [
       {
         title: 'Scriptwriting & Storyboarding',
         description:
-          'Мы разрабатываем сценарий и визуальный план для чёткого исполнения.'
+          'Мы разрабатываем сценарий и визуальный план для чёткого исполнения.',
       },
       {
         title: 'On‑location & Studio Shoots',
         description:
-          'Съёмка на локации или в студии по вашему сценарию.'
+          'Съёмка на локации или в студии по вашему сценарию.',
       },
       {
         title: 'Editing, Color Grading & Motion Graphics',
         description:
-          'Монтаж, цветокоррекция и анимация для динамичного результата.'
+          'Монтаж, цветокоррекция и анимация для динамичного результата.',
       },
       {
         title: 'Sound Design & Licensed Music',
         description:
-          'Профессиональный звук и лицензированная музыка для полного погружения.'
-      }
+          'Профессиональный звук и лицензированная музыка для полного погружения.',
+      },
     ],
-
-    // Section 3
     creativeImg: '/images/services/video-creative.png',
     creativeTitle: 'Creative Direction',
     creativeDescription:
@@ -91,19 +85,17 @@ const services: Service[] = [
     creativeFeatures: [
       {
         title: 'Concept Development',
-        description: 'Стратегическая проработка идеи перед съёмкой.'
+        description: 'Стратегическая проработка идеи перед съёмкой.',
       },
       {
         title: 'Storyboarding',
-        description: 'Наглядная раскадровка ключевых сцен.'
+        description: 'Наглядная раскадровка ключевых сцен.',
       },
       {
         title: 'Art Direction',
-        description: 'Контроль визуального стиля на площадке.'
-      }
+        description: 'Контроль визуального стиля на площадке.',
+      },
     ],
-
-    // Section 4
     postProdImg: '/images/services/video-postprod.png',
     postProdTitle: 'Post Production',
     postProdDescription:
@@ -111,19 +103,18 @@ const services: Service[] = [
     postProdFeatures: [
       {
         title: 'Editing',
-        description: 'Чёткий монтаж с учётом темпа и ритма.'
+        description: 'Чёткий монтаж с учётом темпа и ритма.',
       },
       {
         title: 'Color Grading',
-        description: 'Профессиональная цветокоррекция для выдержанного стиля.'
+        description:
+          'Профессиональная цветокоррекция для выдержанного стиля.',
       },
       {
         title: 'Sound Design',
-        description: 'Создание звуковой атмосферы и микширование.'
-      }
+        description: 'Создание звуковой атмосферы и микширование.',
+      },
     ],
-
-    // Section 5
     pricingTitle: 'Our Pricing Plans',
     pricingPlans: [
       {
@@ -132,8 +123,8 @@ const services: Service[] = [
         features: [
           'Up to 5 hours of filming',
           '3 edited social media videos',
-          'Basic editing (color, cut, captions)'
-        ]
+          'Basic editing (color, cut, captions)',
+        ],
       },
       {
         name: 'Basic',
@@ -142,8 +133,8 @@ const services: Service[] = [
         features: [
           'Up to 15 hours of filming',
           '6 fully edited videos',
-          'Story & concept support'
-        ]
+          'Story & concept support',
+        ],
       },
       {
         name: 'Pro',
@@ -151,21 +142,59 @@ const services: Service[] = [
         features: [
           'Up to 30 hours of production',
           '10+ high‑production videos',
-          'Motion graphics & advanced editing'
-        ]
+          'Motion graphics & advanced editing',
+        ],
       },
       {
         name: 'A‑la Carte',
         features: [
           'Custom hours & video count',
           'Any level of post‑production',
-          'Platform‑optimized exports'
-        ]
-      }
-    ]
-  },
+          'Platform‑optimized exports',
+        ],
+      },
+    ],
+  }, // ← обязательно запятая здесь
 
-  // Добавьте аналогичные объекты для 'social-media-management', 'content-strategy' и т.д.
-]
+  {
+    slug: 'social-media-management',
+    tagline: 'Turn followers into customers',
+    title: 'Social Media Management',
+    headerImg: '/images/services/smm-header.png',
+    headerDescription: 'Полный цикл SMM‑услуг…',
+    layoutImg: '/images/services/smm-layout.png',
+    layoutTitle: 'Our SMM Process',
+    layoutDescription: 'Планируем, создаём, запускаем и анализируем…',
+    layoutFeatures: [
+      { title: 'Content Calendars', description: '…' },
+      { title: 'Reels & Stories', description: '…' },
+      { title: 'Ad Campaigns', description: '…' },
+      { title: 'Community Management', description: '…' },
+    ],
+    creativeImg: '/images/services/smm-creative.png',
+    creativeTitle: 'Creative Strategy',
+    creativeDescription: '…',
+    creativeFeatures: [
+      { title: 'Trend Research', description: '…' },
+      { title: 'Tone & Voice', description: '…' },
+      { title: 'Hashtag Strategy', description: '…' },
+    ],
+    postProdImg: '/images/services/smm-reporting.png',
+    postProdTitle: 'Analytics & Reporting',
+    postProdDescription: 'Еженедельные и ежемесячные отчёты…',
+    postProdFeatures: [
+      { title: 'KPI Dashboards', description: '…' },
+      { title: 'A/B Testing', description: '…' },
+      { title: 'Insights', description: '…' },
+    ],
+    pricingTitle: 'SMM Pricing Plans',
+    pricingPlans: [
+      { name: 'Starter', price: '$1200/mo', features: ['…'] },
+      { name: 'Growth', highlighted: true, price: '$2200/mo', features: ['…'] },
+      { name: 'Pro', price: '$3500/mo', features: ['…'] },
+    ],
+  }, // ← для последнего объекта тоже можно оставить запятую
+
+]  // ← закрытие массива
 
 export default services
