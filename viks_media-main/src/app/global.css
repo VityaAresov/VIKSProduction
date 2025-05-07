@@ -54,14 +54,14 @@ body {
 }
 
 /* === WRAPPER FOR SCALING */
-#page-wrapper {
+/*/*#page-wrapper {
     transform: scale(0.9);
     transform-origin: top left; /* or 0 0 */
-    width: 111.1111%; /* Compensates width for scale(0.9) */
-    background-color: inherit; /* Наследуем фон от body */
+    /*width: 111.1111%; /* Compensates width for scale(0.9) */
+    /*background-color: inherit; /* Наследуем фон от body */
     /* Высота wrapper'а будет определяться его контентом */
     /* НЕ ДОБАВЛЯЙТЕ min-height: 100vh СЮДА, это вернет проблему */
-}
+} /*/*/
 /* ============================ */
 
 a {
