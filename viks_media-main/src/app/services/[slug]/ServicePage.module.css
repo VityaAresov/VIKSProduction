@@ -1,5 +1,4 @@
-/\* Import fonts */
-/\* --- Base Page Container --- */
+/* --- Base Page Container --- */
 .pageContainer {
 position: relative;
 width: 100%;
@@ -9,7 +8,7 @@ background: #FFFFFF;
 overflow-x: hidden; /* Prevent horizontal scroll \*/
 }
 
-/\* --- Section 1: Header --- \*/
+/* --- Section 1: Header --- */
 .headerSection {
 display: flex;
 flex-direction: row;
@@ -91,15 +90,15 @@ height: auto;
 max-height: 388px;
 border-radius: 30px;
 object-fit: cover;
-background-color: #eee; /\* Placeholder background \*/
+background-color: #eee; /* Placeholder background */
 }
 
-/\* --- Section 2: Layout (Video Production) --- */
+/* --- Section 2: Layout (Video Production) --- */
 .layoutSection {
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-align-items: flex-start; /* Align items to the top \*/
+align-items: flex-start; /* Align items to the top */
 justify-content: center;
 padding: 95px 80px 65px;
 gap: 93px;
@@ -126,7 +125,7 @@ height: auto;
 max-height: 606px;
 border-radius: 30px;
 object-fit: cover;
-background-color: #ddd; /\* Placeholder background */
+background-color: #ddd; /* Placeholder background */
 }
 .layoutContentContainer {
 display: flex;
@@ -204,7 +203,7 @@ color: #555; /* Using a slightly lighter color for description \*/
 max-width: 551px;
 }
 
-/\* --- Section 3: Creative Direction --- */
+/* --- Section 3: Creative Direction --- */
 .creativeDirectionSection {
 display: flex;
 flex-direction: row;
@@ -278,7 +277,7 @@ object-fit: cover;
 background-color: #ddd; /* Placeholder background \*/
 }
 
-/\* --- Section 4: Post Production --- */
+/* --- Section 4: Post Production --- */
 .postProductionSection {
 display: flex;
 flex-direction: row;
@@ -350,7 +349,7 @@ color: #000000;
 }
 /* Re-using featuresList styles \*/
 
-/\* --- Section 5: Pricing --- \*/
+/* --- Section 5: Pricing --- */
 .pricingSection {
 display: flex;
 flex-direction: column;
@@ -486,7 +485,7 @@ left: 4px;
 top: calc( (1.4 \* 1em) / 2 + 5px);
 width: 2px;
 height: calc(100% - 5px);
-background: #646464; /\* Consistent color \*/
+background: #646464; /* Consistent color \*/
 z-index: 1;
 }
 
@@ -497,7 +496,7 @@ padding-bottom: 0;
 display: none;
 }
 
-/\* --- UPDATED: Styles for Ready to Work Section (Based on Figma Spec) --- */
+/* --- UPDATED: Styles for Ready to Work Section (Based on Figma Spec) --- */
 .ctaContainer {
 display: flex;
 flex-direction: row; /* Text and button side-by-side */
@@ -513,7 +512,7 @@ padding: 20px 0; /* Add some vertical padding \*/
 }
 
 .ctaText {
-/\* Styles from Figma spec */
+/* Styles from Figma spec */
 font-family: 'Plus Jakarta Sans', sans-serif;
 font-weight: 600;
 font-size: clamp(28px, 4vw, 40px); /* Responsive font size */
@@ -526,7 +525,7 @@ text-align: center; /* Center text if it wraps \*/
 }
 
 .ctaButton {
-/\* Styles for button Frame 427320691 */
+/* Styles for button Frame 427320691 */
 display: inline-flex; /* Use inline-flex for alignment */
 flex-direction: row;
 justify-content: center;
@@ -560,7 +559,7 @@ transform: scale(1.03); /* Slight zoom effect */
 }
 /* --- End UPDATED Styles --- \*/
 
-/\* --- Footer Styles --- */
+/* --- Footer Styles --- */
 .footerSection {
 padding: 60px 80px;
 background-color: #FFFFFF; /* Footer on white background */
@@ -572,14 +571,14 @@ border-top: 1px solid #eee; /* Subtle separator \*/
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-between; /\* Space out content */
+justify-content: space-between; /* Space out content */
 gap: 60px 40px; /* Row gap, Column gap */
 max-width: 1280px; /* Limit width */
 margin: 0 auto; /* Center container \*/
 }
 
 .footerAbout {
-flex: 1; /\* Allow flexible width */
+flex: 1; /* Allow flexible width */
 flex-basis: 300px; /* Minimum width before wrapping */
 min-width: 250px; /* Absolute minimum */
 display: flex;
@@ -589,7 +588,7 @@ max-width: 534px; /* Limit width \*/
 }
 
 .footerLogo {
-width: 72px; /\* Set logo size \*/
+width: 72px; /* Set logo size \*/
 height: auto;
 object-fit: contain;
 }
@@ -599,19 +598,19 @@ font-family: 'Roboto', sans-serif;
 font-weight: 400;
 font-size: 14px;
 line-height: 24px;
-color: #9B9B9C; /\* Grey text \*/
+color: #9B9B9C; /* Grey text \*/
 }
 
 .footerSocialLinks {
 display: flex;
-gap: 12px; /\* Space between icons \*/
+gap: 12px; /* Space between icons \*/
 }
 
 .footerSocialLink {
 display: flex;
 justify-content: center;
 align-items: center;
-width: 34px; /\* Icon size */
+width: 34px; /* Icon size */
 height: 34px; /* Icon size */
 background: #e7e7e7; /* Icon background */
 border-radius: 50%; /* Make it circular */
@@ -625,7 +624,7 @@ background-color: #192031; /* Darker background on hover */
 color: #FFFFFF; /* White icon on hover \*/
 }
 
-/\* Placeholder for icons if using mask */
+/* Placeholder for icons if using mask */
 .iconPlaceholder {
 width: 1em;
 height: 1em;
@@ -640,7 +639,7 @@ mask-position: center;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-gap: 60px 80px; /\* Row gap, Column gap */
+gap: 60px 80px; /* Row gap, Column gap */
 flex-grow: 1; /* Allow to take remaining space */
 justify-content: flex-start; /* Align groups to the start \*/
 }
@@ -648,7 +647,7 @@ justify-content: flex-start; /* Align groups to the start \*/
 .footerNavGroup {
 display: flex;
 flex-direction: column;
-gap: 16px; /\* Space between title and links */
+gap: 16px; /* Space between title and links */
 min-width: 100px; /* Minimum width for nav groups \*/
 }
 
@@ -657,7 +656,7 @@ font-family: 'Roboto', sans-serif;
 font-weight: 600;
 font-size: 18px;
 line-height: 21px;
-color: #192031; /\* Dark title */
+color: #192031; /* Dark title */
 margin-bottom: 10px; /* Space below title \*/
 }
 
@@ -667,7 +666,7 @@ padding: 0;
 margin: 0;
 display: flex;
 flex-direction: column;
-gap: 12px; /\* Space between links \*/
+gap: 12px; /* Space between links \*/
 }
 
 .footerNavLink {
@@ -675,7 +674,7 @@ font-family: 'Roboto', sans-serif;
 font-weight: 400;
 font-size: 14px;
 line-height: 1.5;
-color: #9B9B9C; /\* Grey link color */
+color: #9B9B9C; /* Grey link color */
 text-decoration: none;
 transition: color 0.2s;
 }
@@ -690,14 +689,14 @@ color: #9B9B9C;
 color: #000000;
 }
 
-/\* Make non-link contact info look similar but not clickable \*/
+/* Make non-link contact info look similar but not clickable */
 .footerContactList span.footerNavLink {
 cursor: default;
 }
 
 .footerContactItem {
 display: flex;
-align-items: flex-start; /\* Align icon with top of text */
+align-items: flex-start; /* Align icon with top of text */
 gap: 12px; /* Space between icon and text */
 }
 .footerContactItem .iconPlaceholder {
@@ -708,7 +707,7 @@ flex-shrink: 0; /* Prevent icon from shrinking \*/
 }
 
 .footerCopyright {
-width: 100%; /\* Take full width */
+width: 100%; /* Take full width */
 text-align: center; /* Center copyright text */
 padding-top: 40px; /* Space above copyright */
 margin-top: 40px; /* Ensure separation */
@@ -720,7 +719,7 @@ color: #9B9B9C; /* Grey text \*/
 /\* --- Media Queries --- \*/
 
 @media (max-width: 1350px) {
-/\* Adjust pricing cards container for slightly smaller screens */
+/* Adjust pricing cards container for slightly smaller screens */
 .pricingCardsContainer {
 gap: 30px; /* Reduce gap */
 max-width: 90%; /* Allow slightly more width */
@@ -747,7 +746,7 @@ transform: scale(1.02); /* Slightly reduce scale \*/
 }
 
 @media (max-width: 960px) {
-/\* Tablet adjustments \*/
+/* Tablet adjustments \*/
 
 ```
 /* General Section Padding */
@@ -824,7 +823,7 @@ transform: scale(1.02); /* Slightly reduce scale \*/
 }
 
 @media (max-width: 600px) {
-/\* Mobile adjustments \*/
+/* Mobile adjustments \*/
 
 ```
 /* General Section Padding & Gaps */
