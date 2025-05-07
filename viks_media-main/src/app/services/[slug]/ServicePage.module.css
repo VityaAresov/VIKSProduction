@@ -1,0 +1,276 @@
+/* ServicePage.module.css */
+
+/* Container */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Section 1: Header */
+.headerSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.headerContentContainer {
+  flex: 1 1 400px;
+}
+.taglineWrapper {
+  margin-bottom: 10px;
+}
+.tagline {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555;
+}
+.headerTextContent {}
+.heading1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+.description1 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.headerImageContainer {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.headerImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Section 2: Layout */
+.layoutSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.layoutImageContainer {
+  flex: 1 1 400px;
+}
+.layoutImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.layoutContentContainer {
+  flex: 1 1 400px;
+}
+.layoutIntroBlock {
+  margin-bottom: 20px;
+}
+.heading2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+.description2 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Features list */
+.keyFeaturesTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+.featuresList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .featuresList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.featureItem {}
+.featureTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #111;
+}
+.featureDescription {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Section 3: Creative Direction */
+.creativeDirectionSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.creativeContentContainer {
+  flex: 1 1 400px;
+}
+.creativeIntroBlock {
+  margin-bottom: 20px;
+}
+.heading3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+.description3 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.creativeFeaturesList {}
+.creativeImageContainer {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.creativeImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Section 4: Post Production */
+.postProductionSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.postProdImageContainer {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.postProdImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.postProdContentContainer {
+  flex: 1 1 400px;
+}
+.postProdIntroBlock {
+  margin-bottom: 20px;
+}
+.heading4 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+.description4 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Section 5: Pricing */
+.pricingSection {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.pricingTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #111;
+}
+.pricingCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .pricingCardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .pricingCardsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.priceCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+.highlightedCard {
+  border-color: #000;
+  background: #f8f8f8;
+}
+.planName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111;
+}
+.planPrice {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+.planFeatureItem {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+.ctaContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+.ctaText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+.ctaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.2s, color 0.2s;
+}
+.ctaButton:hover {
+  background: #000;
+  color: #fff;
+}
