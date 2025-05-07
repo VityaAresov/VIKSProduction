@@ -1,16 +1,12 @@
-// src/app/services/[slug]/page.tsx
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import type { PageProps } from 'next/types'
 import services, { Service } from '@/data/services'
 import styles from './ServicePage.module.css'
 
 export const generateStaticParams = () =>
   services.map((s) => ({ slug: s.slug }))
 
-export default function ServicePage({
-  params,
-}: PageProps<{ slug: string }>) {
+export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = services.find((s: Service) => s.slug === params.slug)
   if (!service) return notFound()
 
