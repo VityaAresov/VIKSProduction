@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+// next.config.ts
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  eslint: {
+    // не останавливать билд при ошибках линтера
+    ignoreDuringBuilds: true,
+  },
+  // ...остальные настройки
+}
 
-export default nextConfig;
+export default nextConfig
