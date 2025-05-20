@@ -227,6 +227,14 @@ const ContactForm: React.FC = () => {
                                 aria-required="true"
                             ></textarea>
                         </div>
+
+                        <div class="formGroup checkboxGroup">
+                         <label class="checkboxLabel">
+                          <input type="checkbox" name="sms_consent" required>
+                          I agree to receive SMS updates and notifications from Viks Production. Message and data rates may apply.
+                         </label>
+                        </div>
+
                         <div className={styles.recaptchaNotice}>
                             {/* ... (reCAPTCHA notice) ... */}
                             This site is protected by reCAPTCHA and the Google <a href="privacy">Privacy Policy</a> and <a
