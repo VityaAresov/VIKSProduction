@@ -228,9 +228,9 @@ const ContactForm: React.FC = () => {
                             ></textarea>
                         </div>
 
-                        <div class="formGroup checkboxGroup">
-                         <label class="checkboxLabel">
-                          <input type="checkbox" name="sms_consent" required>
+                        <div className="formGroup checkboxGroup">
+                         <label className="checkboxLabel">
+                         <input type="checkbox" name="sms_consent" required />
                           I agree to receive SMS updates and notifications from Viks Production. Message and data rates may apply.
                          </label>
                         </div>
