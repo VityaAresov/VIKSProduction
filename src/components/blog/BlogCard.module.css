@@ -1,0 +1,110 @@
+
+
+.blogCardLink {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    transition: transform 0.2s ease-out; 
+}
+
+.blogCardLink:hover {
+    transform: translateY(-5px); 
+}
+
+.blogCard {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14.8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    height: 540px; 
+    box-sizing: border-box;
+}
+
+.cardImage {
+    height: 298px; 
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    flex-shrink: 0; 
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.cardContent {
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    box-sizing: border-box;
+}
+
+.cardCategory {
+    display: inline-block; 
+    align-self: flex-start; 
+    padding: 6px 16px; 
+    border: 1px solid #010205;
+    border-radius: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4; 
+    letter-spacing: -0.02em;
+    color: #010205;
+    margin-bottom: 20px; 
+}
+
+.cardTitle {
+    font-family: 'Evolventa', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.25; 
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin: 0 0 15px 0; 
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: calc(3 * 28px * 1.25); 
+}
+
+.cardDate {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2; 
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin: 0;
+    margin-top: auto; 
+    padding-top: 10px; 
+}
+
+
+@media (max-width: 768px) {
+    .blogCard {
+        height: auto; 
+    }
+    .cardImage {
+        height: 220px; 
+    }
+    .cardTitle {
+        font-size: 22px;
+        -webkit-line-clamp: 2; 
+        min-height: calc(2 * 22px * 1.25);
+    }
+    .cardDate {
+        font-size: 16px;
+    }
+    .cardCategory {
+        font-size: 13px;
+        padding: 4px 12px;
+        margin-bottom: 15px;
+    }
+    .cardContent {
+        padding: 20px;
+    }
+}

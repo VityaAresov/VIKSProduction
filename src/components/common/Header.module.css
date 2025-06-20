@@ -1,0 +1,402 @@
+/* Header.module.css */
+
+/* ================================== */
+/* === Base Header Styles =========== */
+/* ================================== */
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px; /* Horizontal padding for desktop */
+    height: 70px; /* Header height for desktop */
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    position: sticky; /* Stick to top */
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    box-sizing: border-box; /* Padding included in width/height */
+}
+
+.leftSection {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 74px; /* Space between logo and navigation */
+}
+
+.logoWrapper {
+    flex-shrink: 0; /* Logo should not shrink */
+}
+
+.logoImage {
+    display: block; /* Removes extra space below image */
+}
+
+/* ================================== */
+/* === Desktop Navigation =========== */
+/* ================================== */
+
+.nav {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 33px; /* Space between nav items */
+}
+
+.navItem {
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 7px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #020407;
+    line-height: 1.35;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s ease-in-out;
+    text-decoration: none;
+    border: none;
+    background: none;
+    padding: 0;
+}
+.navItem:hover {
+    color: #555; /* Hover color */
+}
+
+.navItemText {
+    /* Specific styles for text if needed */
+}
+
+/* ================================== */
+/* === Desktop "Contact Us" Button == */
+/* ================================== */
+
+.getStartedWrapper {
+    display: inline-flex; /* Size based on content */
+}
+
+.getStartedLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 16px;
+    border: 1px solid #010205;
+    border-radius: 50px;
+    background-color: white;
+    transition: background-color 0.15s ease-in-out;
+    flex-shrink: 0; /* Button should not shrink */
+    text-decoration: none;
+}
+.getStartedLink:hover {
+    background-color: #f8f8f8; /* Hover background */
+}
+
+.getStartedText {
+    color: #010205;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* ================================== */
+/* === Mobile Navigation Toggle ===== */
+/* ================================== */
+
+/* Container for the mobile menu toggle button */
+.mobileNavToggle {
+    display: none; /* Hidden by default, shown in media query */
+    z-index: 51; /* Above header shadow */
+    position: relative; /* Needed for z-index */
+}
+
+/* The actual button */
+.mobileNavToggle button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    line-height: 0; /* Remove extra line height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151; /* Default icon color */
+}
+
+/* ================================== */
+/* === Mobile Menu Container & Anim == */
+/* ================================== */
+
+.mobileMenuContainer {
+    position: fixed; /* Relative to viewport */
+    top: 80px; /* Matches mobile header height */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff; /* Menu background */
+    z-index: 40; /* Below header (50), above content */
+    padding: 20px 20px 40px 20px; /* Inner padding (more at bottom) */
+    overflow-y: auto; /* Scroll if content overflows */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    border-top: 1px solid #e5e7eb; /* Separator line */
+    box-sizing: border-box;
+
+    /* --- Animation Styles --- */
+    /* Initial (Hidden) State */
+    opacity: 0;
+    transform: translateY(-15px) scale(0.98); /* Start slightly up and smaller */
+    /* Alternative slide-down: transform: translateY(-100%); */
+    pointer-events: none; /* Disable interactions when hidden */
+    visibility: hidden; /* Hide completely */
+
+    /* Transition Properties */
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), /* Smooth easing for transform */
+    opacity 0.25s ease-out,                             /* Ease out for opacity */
+    visibility 0s linear 0.25s;                         /* Delay visibility change until fade-out finishes */
+}
+
+/* Class added when the menu should be visible */
+.mobileMenuContainerOpen {
+    /* Visible State */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto; /* Enable interactions */
+    visibility: visible;
+
+    /* Transition Properties (matching open animation, visibility immediately) */
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 0.25s ease-out,
+    visibility 0s linear 0s; /* Make visible immediately when opening */
+}
+
+/* ================================== */
+/* === Mobile Menu Content ========== */
+/* ================================== */
+
+/* Navigation links area within mobile menu */
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between links */
+    margin-bottom: 30px; /* Space before Contact Us button */
+}
+
+/* Individual navigation links in mobile menu */
+.mobileNavItem {
+    display: block; /* Full width */
+    padding: 15px 10px; /* Large touch targets */
+    text-align: center;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 18px; /* Larger font size */
+    font-weight: 600;
+    color: #020407;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.mobileNavItem:hover,
+.mobileNavItem:focus {
+    background-color: #f3f4f6; /* Hover/focus background */
+    color: #111827;
+}
+
+/* Wrapper for the "Contact Us" button in mobile menu */
+.mobileGetStartedWrapper {
+    margin-top: auto; /* Push to bottom in flex column */
+    padding-top: 20px; /* Space above button */
+}
+
+/* "Contact Us" link styled as a button in mobile menu */
+.mobileGetStartedLink {
+    display: block; /* Full width */
+    padding: 13px 16px;
+    border: 1px solid #010205;
+    border-radius: 50px;
+    background-color: #010205; /* Dark background for emphasis */
+    transition: background-color 0.15s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+.mobileGetStartedLink:hover {
+    background-color: #374151; /* Darker hover */
+}
+
+/* Text within the mobile "Contact Us" button */
+/* Uses base .getStartedText styles but overrides color */
+.mobileGetStartedLink .getStartedText {
+    color: #ffffff; /* White text */
+    /* Inherits font-family, size, weight, etc. from .getStartedText */
+}
+
+
+/* ================================== */
+/* === Responsiveness =============== */
+/* ================================== */
+
+@media (max-width: 1024px) {
+    /* Hide desktop navigation and button */
+    .nav {
+        display: none;
+    }
+    .getStartedWrapper { /* Desktop button container */
+        display: none;
+    }
+
+    /* Show mobile navigation toggle button */
+    .mobileNavToggle {
+        display: block;
+    }
+
+    /* Adjust header for mobile */
+    .header {
+        padding: 0 20px; /* Less horizontal padding */
+        height: 60px; /* Reduced height */
+    }
+
+    /* Adjust gap in left section */
+    .leftSection {
+        gap: 20px;
+    }
+}
+
+/* Optional: Explicitly prevent interaction on desktop */
+/* This isn't strictly necessary if the toggle button is hidden */
+/* but can be a safeguard. */
+/*
+@media (min-width: 1025px) {
+    .mobileMenuContainer {
+       pointer-events: none;
+       visibility: hidden;
+    }
+}
+*/
+
+/* ============================================== */
+/* === Original Dropdown Styles (Commented Out) = */
+/* ============================================== */
+/*
+.chevronDown {
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+    color: #020407;
+    display: block;
+}
+
+.chevronDownRotated {
+    transform: rotate(180deg);
+}
+
+.servicesWrapper {
+    position: relative;
+}
+
+.dropdownMenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 12px;
+    width: auto;
+    min-width: 180px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 0.5px dashed #000000;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 4px 0;
+    z-index: 60;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.dropdownItem {
+    display: block;
+    padding: 8px 16px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000000;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in-out;
+}
+.dropdownItem:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+*/
+
+/* Контейнер для дропдауна */
+.servicesDropdown {
+  position: relative;
+}
+
+/* Кнопка “Services” — использует .navItem */
+.servicesDropdown .navItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Стрелка рядом с текстом */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid currentColor;
+  transition: transform 0.2s ease;
+  margin-left: 4px;
+}
+
+/* Сам список, скрыт по умолчанию */
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;        /* прилипает прямо под кнопку */
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  min-width: 180px;
+  background: #ffffff;
+  border: 1px dashed #888;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 50;
+}
+
+/* Элемент меню */
+.dropdownItem {
+  display: block;
+  padding: 8px 16px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #020407;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+}
+
+/* Показать меню и вращать стрелку при наведении на кнопку или на само меню */
+.servicesDropdown:hover .dropdownMenu,
+.servicesDropdown .dropdownMenu:hover {
+  display: block;
+}
+.servicesDropdown:hover .arrow {
+  transform: rotate(180deg);
+}
