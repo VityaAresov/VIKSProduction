@@ -1,0 +1,292 @@
+
+
+.testimonialSection {
+    background-color: #FFFFFF;
+    padding: 80px 0; 
+    position: relative;
+    overflow: hidden; 
+}
+
+.container {
+    max-width: 1280px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    position: relative;
+    z-index: 1;
+    display: flex; 
+    flex-direction: column;
+    gap: 50px; 
+}
+
+.swiperInstance {
+    width: 100%; 
+    
+    min-height: 250px; 
+}
+
+.swiperSlide {
+    height: auto; 
+    background-color: transparent; 
+    display: flex; 
+    align-items: center;
+    box-sizing: border-box; 
+}
+
+.quoteText {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.6; 
+    letter-spacing: -0.03em;
+    color: #010205; 
+    margin: 0; 
+    width: 100%; 
+}
+
+
+.staticFooter {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    padding: 10px 0; 
+    height: 70px; 
+    box-sizing: border-box;
+}
+
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+    gap: 24px; 
+    flex-shrink: 0; 
+    height: 100%; 
+}
+
+.authorImage {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    flex-shrink: 0; 
+}
+
+.authorDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px; 
+}
+
+.authorName {
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3; 
+    color: #010205;
+    margin: 0;
+    white-space: nowrap; 
+}
+
+.authorTitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4; 
+    color: #7E8387; 
+    margin: 0;
+    white-space: nowrap; 
+}
+
+
+.navigationControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 38px; 
+    width: 299px; 
+    height: 56px; 
+    flex-shrink: 0;
+}
+
+
+.testimonialNavButton {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88px; 
+    height: 56px; 
+    border-radius: 70px; 
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.testimonialNavButton svg { 
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+
+.prevButton {
+    border: 1px solid #010205;
+    background-color: #FFFFFF;
+    color: #010205;
+}
+.prevButton:hover {
+    border: 1px solid #010205;
+    background-color: #010205;
+    color: #FFFFFF;}
+
+
+.nextButton {
+    border: 1px solid #010205; 
+    background-color: #FFFFFF;
+    color: #010205;
+}
+.nextButton:hover {
+    border: 1px solid #010205;
+    background-color: #010205;
+    color: #FFFFFF;
+
+}
+
+
+.slideCounter {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.8; 
+    min-width: 47px; 
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: inline-flex; 
+    align-items: baseline;
+}
+
+
+.currentSlideNum {
+    color: #010205; 
+    text-decoration-line: underline; 
+    text-underline-offset: 3px; 
+}
+
+
+.counterSeparator {
+    color: #AEB4BA; 
+    margin-left: 2px;
+    margin-right: 2px;
+    text-decoration-line: none; 
+}
+
+
+.totalSlidesNum {
+    color: #AEB4BA; 
+    text-decoration-line: none; 
+}
+
+
+
+@media (max-width: 1024px) {
+    .quoteText {
+        font-size: 28px;
+    }
+    .authorName { font-size: 18px; }
+    .authorTitle { font-size: 14px; }
+    .testimonialNavButton { 
+        width: 70px;
+        height: 48px;
+    }
+    .testimonialNavButton svg {
+        width: 20px;
+        height: 20px;
+    }
+    .navigationControls {
+        width: auto; 
+        gap: 20px; 
+        height: auto; 
+    }
+    .slideCounter {
+        font-size: 14px; 
+        min-width: 35px;
+        line-height: 1.6;
+    }
+    .container {
+        gap: 40px; 
+    }
+    .staticFooter {
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonialSection {
+        padding: 60px 0;
+    }
+    .quoteText {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+    .staticFooter {
+        flex-direction: column; 
+        height: auto;
+        gap: 30px; 
+    }
+    .authorInfo {
+        
+        
+    }
+    .navigationControls {
+        gap: 25px;
+        
+        
+    }
+    .container {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonialSection {
+        padding: 40px 0;
+    }
+    .quoteText {
+        font-size: 20px;
+    }
+    .staticFooter {
+        gap: 25px;
+    }
+    .authorImage {
+        width: 60px;
+        height: 60px;
+    }
+    .authorName {
+        font-size: 16px;
+    }
+    .authorTitle {
+        font-size: 13px;
+    }
+    .testimonialNavButton { 
+        width: 60px;
+        height: 40px;
+    }
+    .testimonialNavButton svg {
+        width: 18px;
+        height: 18px;
+    }
+    .navigationControls {
+        gap: 15px;
+    }
+    .slideCounter {
+        font-size: 13px;
+        min-width: 30px;
+        line-height: 1.5;
+    }
+    .container {
+        gap: 30px;
+    }
+}

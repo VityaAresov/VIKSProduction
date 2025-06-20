@@ -1,0 +1,27 @@
+/* src/app/cases/OurWorksPage.module.css */
+
+/* Define a background for the page if it doesn't have one globally */
+/* For demonstration, let's add a light grey background */
+/* You can remove or change this background-color if your page already has one */
+/* defined in a layout file or globals.css */
+/*
+:global(body) { // Example: applying to body globally (adjust selector if needed)
+  background-color: #f4f4f4;
+}
+*/
+
+.pageContentWrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+    /* Add top/bottom padding if needed for spacing from header/footer */
+    /* padding-top: 40px; */
+    /* padding-bottom: 40px; */
+
+    /* Optional: Set a max-width for the content area if desired, */
+    /* otherwise it will just be full-width minus the padding. */
+    /* max-width: 1600px; */ /* Example max-width */
+    /* margin-left: auto; */ /* Center if max-width is set */
+    /* margin-right: auto; */ /* Center if max-width is set */
+}
+
+/* Add any other styles specific to the OurWorksPage layout here */
