@@ -2,7 +2,7 @@
 
 'use client';
 
-import ServicesPage from '@/components/Service/ServicesPage';
+import ServicesPage from '@/components/Service/ServicePage.module.css';
 
 export default function Services() {
   return <ServicesPage />;
