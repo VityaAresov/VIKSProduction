@@ -1,124 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services – VIKS Production</title>
-
-  <!-- Подключение стилей -->
-  <link rel="stylesheet" href="/styles/services.css" />
+  <title>Our Services – VIKS Production</title>
+  <link rel="stylesheet" href="/styles/services.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap">
+  <style>
+    body { margin: 0; padding: 0; background: #fff; color: #111; font-family: 'Roboto', 'Open Sans', Arial, sans-serif; }
+    .container { max-width: 1440px; margin: 0 auto; }
+    /* Центрируем ровно по сетке */
+    section { width: 100%; box-sizing: border-box; }
+    .headerSection {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content:space-between;
+      padding: 104px 8vw 80px 8vw; background: #fff;
+    }
+    .headerContentContainer { flex: 1; min-width: 300px; max-width: 600px; }
+    .headerTextContent { margin-top: 36px; }
+    .tagline { font-family:'Open Sans'; font-weight:600; font-size:17px; color:#A9F160; margin:0 0 22px 0; letter-spacing:0.02em;}
+    .heading1 { margin:0 0 22px 0;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(38px,5vw,60px);font-weight:700;line-height:1.2;}
+    .description1 { font-family: 'Open Sans',sans-serif; font-size:20px; line-height:156%; color: #666; margin: 0; max-width:510px;}
+    .headerImageContainer { flex:1; min-width:290px; max-width:520px; display:flex; align-items:center; justify-content:center; }
+    .headerImage { width:100%; max-height:340px; object-fit:cover; border-radius:32px; background:#eee;}
+    /* услуги блок */
+    .servicesSection { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:60px; padding:70px 8vw 50px 8vw; }
+    .servicesImageContainer { flex:1; min-width:280px; max-width:460px; }
+    .servicesImage { width:100%; border-radius:30px; background:#ddd; object-fit:cover; }
+    .servicesContentContainer { flex:1; min-width:280px; max-width:600px; display:flex; flex-direction:column; justify-content:center; }
+    .heading2 { font-family:'Plus Jakarta Sans',sans-serif;font-size:38px;font-weight:700;margin:0 0 12px 0;}
+    .description2 { font-size:18px; color:#333; margin:0 0 32px 0;}
+    .featuresList { list-style:none; margin:0; padding:0; }
+    .featureItem { margin-bottom:22px;}
+    .featureTitle { font-size:20px; font-weight:700; margin-bottom:6px;}
+    .featureDescription { font-size:16px; color:#555;}
+    /* process блок */
+    .processSection { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:60px;padding:70px 8vw 50px 8vw; background:#fafbfd;}
+    .processContentContainer { flex:1; min-width:300px; max-width:540px;}
+    .heading3 { font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:700;margin:0 0 16px 0;}
+    .description3 { font-size:17px; color:#333;margin:0 0 26px 0;}
+    /* why us */
+    .whySection { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:60px;padding:64px 8vw 60px 8vw; }
+    .whyContentContainer { flex:1; min-width:290px; max-width:520px;}
+    .heading4 { font-family:'Plus Jakarta Sans'; font-size:34px; font-weight:700;margin:0 0 14px 0;}
+    .description4 {font-size:17px;color:#232323;}
+    /* CTA */
+    .ctaSection {background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 8vw;}
+    .ctaText {font-family:'Plus Jakarta Sans',sans-serif;color:#fff;font-weight:700;font-size:32px;letter-spacing:-0.02em;margin-bottom:26px;text-align:center;}
+    .ctaButton {padding:20px 44px;font-size:18px;background:#A9F160;color:#151515;font-weight:700;border:none;border-radius:64px;box-shadow:0 3px 18px #0001;cursor:pointer;transition:all .19s;}
+    .ctaButton:hover {background:#90d242;}
+    /* Responsive */
+    @media (max-width:1000px) {
+      .headerSection, .servicesSection, .processSection, .whySection {flex-direction:column; gap:38px;}
+      .headerImageContainer,.servicesImageContainer,.whyImageContainer,.processImageContainer {max-width:460px;margin:0 auto;}
+      .headerContentContainer,.servicesContentContainer,.processContentContainer,.whyContentContainer {max-width:100%;}
+    }
+    @media (max-width:600px) {
+      .headerSection,.servicesSection,.processSection,.whySection,.ctaSection {padding:36px 6vw;}
+      .heading1,.heading2,.heading3,.heading4 {font-size:7vw;}
+      .ctaText{font-size:22px;}
+      .ctaButton{padding:16px 18px;font-size:15px;}
+    }
+  </style>
 </head>
 <body>
-  <!-- HERO SECTION -->
+
   <section class="headerSection">
     <div class="headerContentContainer">
-      <div class="taglineWrapper">
-        <p class="tagline">For Startups & Tech Companies</p>
-      </div>
+      <span class="tagline">For Startups & Tech Companies</span>
       <div class="headerTextContent">
-        <h1 class="heading1">Your Growth Engine, in Video</h1>
+        <h1 class="heading1">Accelerate Your Growth with VIKS Video + SMM</h1>
         <p class="description1">
-          We deliver high-impact explainer videos, vertical content and social media growth automation — crafted for early-stage startups and digital-first companies.
+          Strategic, creative, and data-driven video production and social content, tailored for early-stage and innovative tech businesses. We deliver assets proven to convert — fast.
         </p>
       </div>
     </div>
     <div class="headerImageContainer">
-      <img src="/media/services_hero.jpg" alt="Video Work" class="headerImage" />
+      <img src="/media/services_hero.jpg" class="headerImage" alt="Creative team at work">
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section class="layoutSection">
-    <div class="layoutImageContainer">
-      <img src="/media/services_video.jpg" alt="Video Production" class="layoutImage" />
+  <section class="servicesSection">
+    <div class="servicesImageContainer">
+      <img src="/media/services_video.jpg" class="servicesImage" alt="SaaS video production montage">
     </div>
-    <div class="layoutContentContainer">
-      <div class="layoutIntroBlock">
-        <h2 class="heading2">We Build Conversion-Ready Content</h2>
-        <p class="description2">
-          Your brand needs more than visuals — it needs outcome-oriented content that performs across sales, hiring and fundraising.
-        </p>
-      </div>
+    <div class="servicesContentContainer">
+      <h2 class="heading2">Conversion-Focused Content Packages</h2>
+      <p class="description2">
+        We build the narrative and structure that closes deals, boosts demo booking, and excites investors — not just “pretty videos”, but assets built for the numbers.
+      </p>
       <ul class="featuresList">
         <li class="featureItem">
-          <h3 class="featureTitle">📽 Explainer Video (60s)</h3>
-          <p class="featureDescription">Powerful product story for your homepage, fundraising, or ads. One minute, full clarity.</p>
+          <span class="featureTitle">Explainer Video (60s)</span>
+          <span class="featureDescription">A polished, high-impact narrative for your homepage, pitch, or campaign. Ideal for VC decks and websites.</span>
         </li>
         <li class="featureItem">
-          <h3 class="featureTitle">📱 Reels for Social</h3>
-          <p class="featureDescription">Up to 5 vertical social-first edits from content day — optimized for LinkedIn, IG, TikTok.</p>
+          <span class="featureTitle">Reels & Verticals</span>
+          <span class="featureDescription">Short-form videos (up to 5 per cycle) ready for Insta, LinkedIn, TikTok, or paid ads.</span>
         </li>
         <li class="featureItem">
-          <h3 class="featureTitle">🧩 SMM Content Set</h3>
-          <p class="featureDescription">Graphics, motion, and captions — all pieces you’d normally pay a social team for.</p>
+          <span class="featureTitle">SMM Sprint Bundle</span>
+          <span class="featureDescription">A ready-to-post package: graphics, motion clips, captions. Plug & play for your social media strategy.</span>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- PROCESS SECTION -->
-  <section class="creativeDirectionSection">
-    <div class="creativeContentContainer">
-      <div class="creativeIntroBlock">
-        <h2 class="heading3">How We Work</h2>
-        <p class="description3">
-          Process tuned to startup speed — launch in under 7 days.
-        </p>
-        <ul class="featuresList creativeFeaturesList">
-          <li class="featureItem">
-            <h3 class="featureTitle">1. Discovery Call</h3>
-            <p class="featureDescription">We talk goals, content type, funnel. You get a fixed quote & calendar.</p>
-          </li>
-          <li class="featureItem">
-            <h3 class="featureTitle">2. Shooting + Editing</h3>
-            <p class="featureDescription">Our team shoots, edits, and iterates fast. All in-house, no outsourcing.</p>
-          </li>
-          <li class="featureItem">
-            <h3 class="featureTitle">3. Delivery</h3>
-            <p class="featureDescription">Polished content, performance-tested formats, ready for upload and action.</p>
-          </li>
-        </ul>
+  <section class="processSection">
+    <div class="processContentContainer">
+      <h3 class="heading3">A Process Built for Startup Speed</h3>
+      <div class="description3">
+        From first sync to asset delivery in as little as 4–7 days. No bureaucracy — just agile, focused delivery.
       </div>
-      <div class="creativeImageContainer">
-        <img src="/media/services_process.jpg" alt="Process" class="creativeImage" />
-      </div>
+      <ul class="featuresList">
+        <li class="featureItem"><strong>1. Discovery Call:</strong> Align on goals, style, and core outcomes. You get a clear fixed quote, zero surprises.</li>
+        <li class="featureItem"><strong>2. Script, Shoot, Edit:</strong> Our team plans, shoots, animates or records. Iteration built-in — but always fast.</li>
+        <li class="featureItem"><strong>3. Delivery & Results:</strong> All files, all versions, all ready. Upload to platform, press play, see your numbers change.</li>
+      </ul>
+    </div>
+    <div class="servicesImageContainer">
+      <img src="/media/services_process.jpg" class="servicesImage" alt="Creative direction and workflow">
     </div>
   </section>
 
-  <!-- WHY VIKS SECTION -->
-  <section class="postProductionSection">
-    <div class="postProdImageContainer">
-      <img src="/media/services_post.jpg" alt="Result-Centric" class="postProdImage" />
+  <section class="whySection">
+    <div class="whyImageContainer">
+      <img src="/media/services_post.jpg" class="servicesImage" alt="Results and reporting">
     </div>
-    <div class="postProdContentContainer">
-      <div class="postProdIntroBlock">
-        <h2 class="heading4">VIKS Means Results</h2>
-        <p class="description4">We’re not a “video team” — we’re your growth partner in creative execution:</p>
-        <ul class="featuresList">
-          <li class="featureItem">
-            <h3 class="featureTitle">🚀 ROI-Driven</h3>
-            <p class="featureDescription">Our edits improve conversion rate, demo booking, and investor response.</p>
-          </li>
-          <li class="featureItem">
-            <h3 class="featureTitle">🎯 Strategy First</h3>
-            <p class="featureDescription">We script to your funnel. Not fluff, just business content that sells.</p>
-          </li>
-          <li class="featureItem">
-            <h3 class="featureTitle">📊 Reporting Ready</h3>
-            <p class="featureDescription">You get videos + thumbnails + CTAs. Full content system, not just files.</p>
-          </li>
-        </ul>
-      </div>
+    <div class="whyContentContainer">
+      <h4 class="heading4">Why Teams Choose VIKS</h4>
+      <p class="description4">We deliver business content, not just pretty visuals. Every clip’s purpose is clear: more demos, stronger investor pitch, better social reach.</p>
+      <ul class="featuresList">
+        <li class="featureItem"><span class="featureTitle">7 Days or Less</span><br><span class="featureDescription">Start-to-finish production, always on time so you can stay ahead of your roadmap.</span></li>
+        <li class="featureItem"><span class="featureTitle">Strategy + Execution</span><br><span class="featureDescription">Advisory, scripting, full SMM support – not just “edits”.</span></li>
+        <li class="featureItem"><span class="featureTitle">Measurable ROI</span><br><span class="featureDescription">Clients report 20–50% lift in conversions after launch.</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- CTA SECTION -->
-  <section class="ctaContainer" style="background-color:#111111; margin-top: 60px; padding: 60px 20px; flex-direction: column; text-align: center;">
-    <h2 class="ctaText">Let’s Build Breakout Content for Your Startup</h2>
-    <a href="https://calendly.com/viksproduction/20min" class="ctaButton">Book Free Consultation</a>
+  <section class="ctaSection">
+    <h2 class="ctaText">Book your free growth call – see how we’ll get you results this month</h2>
+    <a href="https://calendly.com/viksproduction/20min" class="ctaButton">Book Now</a>
   </section>
+
 </body>
 </html>
