@@ -6,14 +6,21 @@ import { useEffect } from 'react';
 function useScrollAnimation() {
   useEffect(() => {
     const revealBlocks = document.querySelectorAll('[data-animate="fadein"]');
+    
     const revealOnScroll = () => {
       revealBlocks.forEach((block) => {
         const top = block.getBoundingClientRect().top;
-        if (top < window.innerHeight - 80) block.classList.add(styles.fadeIn);
+        if (top < window.innerHeight - 80) {
+          block.classList.add(styles.fadeIn);
+        }
       });
     };
-    window.addEventListener('scroll', revealOnScroll);
+    
+    // Вызываем сразу при загрузке
     revealOnScroll();
+    
+    window.addEventListener('scroll', revealOnScroll, { passive: true });
+    
     return () => window.removeEventListener('scroll', revealOnScroll);
   }, []);
 }
@@ -35,12 +42,16 @@ const sliderContent = [
 ];
 
 function Slider() {
-  // Просто горизонтальный скролл или слайд-маркеры — можно внедрить сторонний слайдер для расширения
   return (
     <div className={styles.sliderWrap}>
       {sliderContent.map((s, i) => (
         <div className={styles.sliderCard} key={i}>
-          <img src={s.img} alt={s.caption} className={styles.sliderImg} />
+          <img 
+            src={s.img} 
+            alt={s.caption} 
+            className={styles.sliderImg}
+            loading="lazy"
+          />
           <span className={styles.sliderCaption}>{s.caption}</span>
         </div>
       ))}
@@ -64,14 +75,29 @@ export default function ServicesPage() {
             <p className={styles.description1}>
               We build strategic, conversion-focused video, reels and SMM for tech businesses who value traction.
             </p>
-            <a href="https://calendly.com/viksproduction/20min" className={styles.ctaButton}>Book Free Audit</a>
+            <a 
+              href="https://calendly.com/viksproduction/20min" 
+              className={styles.ctaButton}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Free Audit
+            </a>
           </div>
         </div>
         <div className={styles.heroVisual}>
-          {/* Фоновое циклическое видео: замените на свой .webm/mp4 */}
-          <video autoPlay loop muted playsInline className={styles.heroVideo}>
+          {/* Фоновое циклическое видео - добавил fallback изображение */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className={styles.heroVideo}
+            poster="/media/hero-poster.jpg"
+          >
             <source src="/media/hero-bg.webm" type="video/webm" />
             <source src="/media/hero-bg.mp4" type="video/mp4" />
+            {/* Fallback для старых браузеров */}
           </video>
         </div>
       </section>
@@ -143,17 +169,17 @@ export default function ServicesPage() {
         <h2 className={styles.heading2}>Why VIKS?</h2>
         <div className={styles.whyGrid}>
           <div>
-            <span className={styles.whyEmoji}>⚡️</span>
+            <span className={styles.whyEmoji} role="img" aria-label="Fast">⚡️</span>
             <h4>Fast Launch</h4>
             <p>Delivery in 5–10 days, always on your go-to-market schedule.</p>
           </div>
           <div>
-            <span className={styles.whyEmoji}>📈</span>
+            <span className={styles.whyEmoji} role="img" aria-label="Growth">📈</span>
             <h4>ROI Obsessed</h4>
             <p>Everything we do is measured: +20–50% conversions, real demo bookings, MQL pipeline.</p>
           </div>
           <div>
-            <span className={styles.whyEmoji}>🚀</span>
+            <span className={styles.whyEmoji} role="img" aria-label="Rocket">🚀</span>
             <h4>AI + Human Creativity</h4>
             <p>AI powered production, human storytelling — speed + premium.</p>
           </div>
@@ -164,9 +190,16 @@ export default function ServicesPage() {
       <section className={styles.finalCtaBlock} data-animate="fadein">
         <h2 className={styles.finalCtaText}>
           Ready to scale your traction? <br />
-          <span className={styles.animatedHighlight}>Book a free strategy call — let’s win together.</span>
+          <span className={styles.animatedHighlight}>Book a free strategy call — let&apos;s win together.</span>
         </h2>
-        <a href="https://calendly.com/viksproduction/20min" className={styles.ctaButtonBig}>Book Now</a>
+        <a 
+          href="https://calendly.com/viksproduction/20min" 
+          className={styles.ctaButtonBig}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
       </section>
     </main>
   );
