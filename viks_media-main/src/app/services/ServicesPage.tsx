@@ -1,108 +1,172 @@
-// src/app/services/ServicesPage.tsx
 'use client';
-
 import styles from './ServicePage.module.css';
+import { useEffect } from 'react';
+
+// Для fade-in анимаций при скролле
+function useScrollAnimation() {
+  useEffect(() => {
+    const revealBlocks = document.querySelectorAll('[data-animate="fadein"]');
+    const revealOnScroll = () => {
+      revealBlocks.forEach((block) => {
+        const top = block.getBoundingClientRect().top;
+        if (top < window.innerHeight - 80) block.classList.add(styles.fadeIn);
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+    return () => window.removeEventListener('scroll', revealOnScroll);
+  }, []);
+}
+
+// Простая галерея (слайдер-контента)
+const sliderContent = [
+  {
+    img: '/media/slider1.jpg',
+    caption: 'AI SaaS Campaign – +42% demo bookings',
+  },
+  {
+    img: '/media/slider2.jpg',
+    caption: 'Product Hunt Launch – $1.7m ARR Startup',
+  },
+  {
+    img: '/media/slider3.jpg',
+    caption: 'Vertical Series – LinkedIn Virality',
+  },
+];
+
+function Slider() {
+  // Просто горизонтальный скролл или слайд-маркеры — можно внедрить сторонний слайдер для расширения
+  return (
+    <div className={styles.sliderWrap}>
+      {sliderContent.map((s, i) => (
+        <div className={styles.sliderCard} key={i}>
+          <img src={s.img} alt={s.caption} className={styles.sliderImg} />
+          <span className={styles.sliderCaption}>{s.caption}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function ServicesPage() {
+  useScrollAnimation();
+
   return (
     <main className={styles.pageContainer}>
-      {/* Hero Section */}
-      <section className={styles.headerSection}>
-        <div className={styles.headerContentContainer}>
-          <span className={styles.tagline}>For Startups & Tech Companies</span>
-          <div className={styles.headerTextContent}>
-            <h1 className={styles.heading1}>Accelerate Your Growth with VIKS Video + SMM</h1>
+      {/* Hero */}
+      <section className={styles.heroBlock} data-animate="fadein">
+        <div className={styles.heroContent}>
+          <div>
+            <span className={styles.tagline}>For Startups & Tech Companies</span>
+            <h1 className={styles.heading1}>
+              Breakout Growth for SaaS & Digital <span className={styles.animatedHighlight}>via Content</span>
+            </h1>
             <p className={styles.description1}>
-              Strategic, creative, and data-driven video production and social content, tailored for early-stage and innovative tech businesses. We deliver assets proven to convert — fast.
+              We build strategic, conversion-focused video, reels and SMM for tech businesses who value traction.
             </p>
+            <a href="https://calendly.com/viksproduction/20min" className={styles.ctaButton}>Book Free Audit</a>
           </div>
         </div>
-        <div className={styles.headerImageContainer}>
-          <img
-            src="/media/services_hero.jpg"
-            alt="Creative team at work"
-            className={styles.headerImage}
-          />
+        <div className={styles.heroVisual}>
+          {/* Фоновое циклическое видео: замените на свой .webm/mp4 */}
+          <video autoPlay loop muted playsInline className={styles.heroVideo}>
+            <source src="/media/hero-bg.webm" type="video/webm" />
+            <source src="/media/hero-bg.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
-      {/* Packages Section */}
-      <section className={styles.servicesSection}>
-        <div className={styles.servicesImageContainer}>
-          <img
-            src="/media/services_video.jpg"
-            className={styles.servicesImage}
-            alt="SaaS video production montage"
-          />
-        </div>
-        <div className={styles.servicesContentContainer}>
-          <h2 className={styles.heading2}>Conversion-Focused Content Packages</h2>
-          <p className={styles.description2}>
-            We craft content that drives signups, closes deals and scales traction — fast.
-          </p>
-          <ul className={styles.featuresList}>
-            <li className={styles.featureItem}>
-              <span className={styles.featureTitle}>Explainer Video (60s)</span><br />
-              <span className={styles.featureDescription}>Sharp and story-driven, perfect for VC decks and sales pages.</span>
-            </li>
-            <li className={styles.featureItem}>
-              <span className={styles.featureTitle}>Reels / Vertical Series (up to 5)</span><br />
-              <span className={styles.featureDescription}>Bite-sized videos for social, paid ads and awareness.</span>
-            </li>
-            <li className={styles.featureItem}>
-              <span className={styles.featureTitle}>SMM Content Bundle</span><br />
-              <span className={styles.featureDescription}>Graphics + copy + clips. Automation-ready social content.</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className={styles.processSection}>
-        <div className={styles.processContentContainer}>
-          <h3 className={styles.heading3}>Built for Startup Speed</h3>
-          <p className={styles.description3}>
-            From kickoff call to delivery in as little as 5–7 days.
-          </p>
-          <ul className={styles.featuresList}>
-            <li className={styles.featureItem}><strong>1. Discovery Call:</strong> align goals, objectives, timeline.</li>
-            <li className={styles.featureItem}><strong>2. Script & Shoot:</strong> we produce video + assets.</li>
-            <li className={styles.featureItem}><strong>3. Delivery + Results:</strong> ready for upload. Improve demos, reach & growth.</li>
-          </ul>
-        </div>
-        <div className={styles.servicesImageContainer}>
-          <img
-            src="/media/services_process.jpg"
-            className={styles.servicesImage}
-            alt="Creative direction and workflow"
-          />
+      {/* Packages */}
+      <section className={styles.servicesSection} data-animate="fadein">
+        <h2 className={styles.heading2}>Our Core Packages</h2>
+        <div className={styles.packagesWrap}>
+          <div className={`${styles.packageCard} ${styles.pop}`}>
+            <h3>Launch Kit</h3>
+            <ul>
+              <li>Explainer Video (60s)</li>
+              <li>3 x Short Vertical Reels</li>
+              <li>Delivery: 7 days</li>
+            </ul>
+            <span className={styles.priceTag}>$2,200</span>
+          </div>
+          <div className={styles.packageCard}>
+            <h3>Growth Engine</h3>
+            <ul>
+              <li>Explainer + 5 Reels</li>
+              <li>SMM + Automation Strategy</li>
+              <li>Delivery: 2 weeks</li>
+            </ul>
+            <span className={styles.priceTag}>$4,000</span>
+          </div>
+          <div className={styles.packageCard}>
+            <h3>All-in Scale</h3>
+            <ul>
+              <li>Video Series (8+)</li>
+              <li>Full SMM + Monthly Analytics</li>
+              <li>Dedicated Creative Team</li>
+            </ul>
+            <span className={styles.priceTag}>from $7,500</span>
+          </div>
         </div>
       </section>
 
-      {/* Why Us Section */}
-      <section className={styles.whySection}>
-        <div className={styles.whyImageContainer}>
-          <img
-            src="/media/services_post.jpg"
-            className={styles.servicesImage}
-            alt="Results and reporting"
-          />
-        </div>
-        <div className={styles.whyContentContainer}>
-          <h4 className={styles.heading4}>Why Teams Choose VIKS</h4>
-          <p className={styles.description4}>We specialize in actual growth — not just making things pretty.</p>
-          <ul className={styles.featuresList}>
-            <li className={styles.featureItem}><strong>🚀 7-Day Delivery:</strong> Full edits done fast.</li>
-            <li className={styles.featureItem}><strong>🎯 Strategic Scripting:</strong> Built for viewers and outcomes, not fluff.</li>
-            <li className={styles.featureItem}><strong>📊 Measurable ROI:</strong> Clients report up to +50% conversion lift.</li>
-          </ul>
+      {/* Portfolio Slider */}
+      <section className={styles.sliderSection} data-animate="fadein">
+        <h2 className={styles.heading2}>Case Studies</h2>
+        <Slider />
+      </section>
+
+      {/* Animated Process */}
+      <section className={styles.processSection} data-animate="fadein">
+        <h3 className={styles.heading3}>Our Process = Speed + Measurable Results</h3>
+        <div className={styles.processSteps}>
+          <div className={styles.stepCard}>
+            <div className={styles.iconCircle}>1</div>
+            <h4>Discovery</h4>
+            <p>Audit, goals, calls. You get a fixed quote & timeline.</p>
+          </div>
+          <div className={styles.stepCard}>
+            <div className={styles.iconCircle}>2</div>
+            <h4>Shoot & Build</h4>
+            <p>Scripts, production, SMM distribution — all in-house. Weekly milestones, WIP feedback.</p>
+          </div>
+          <div className={styles.stepCard}>
+            <div className={styles.iconCircle}>3</div>
+            <h4>Launch & Growth</h4>
+            <p>Hand-off or managed SMM. Reporting every 2 weeks for you and your investors.</p>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className={styles.ctaSection}>
-        <h2 className={styles.ctaText}>Let’s build your next breakout story. Book a free call now →</h2>
-        <a href="https://calendly.com/viksproduction/20min" className={styles.ctaButton}>Book Now</a>
+      {/* Why Us */}
+      <section className={styles.whySection} data-animate="fadein">
+        <h2 className={styles.heading2}>Why VIKS?</h2>
+        <div className={styles.whyGrid}>
+          <div>
+            <span className={styles.whyEmoji}>⚡️</span>
+            <h4>Fast Launch</h4>
+            <p>Delivery in 5–10 days, always on your go-to-market schedule.</p>
+          </div>
+          <div>
+            <span className={styles.whyEmoji}>📈</span>
+            <h4>ROI Obsessed</h4>
+            <p>Everything we do is measured: +20–50% conversions, real demo bookings, MQL pipeline.</p>
+          </div>
+          <div>
+            <span className={styles.whyEmoji}>🚀</span>
+            <h4>AI + Human Creativity</h4>
+            <p>AI powered production, human storytelling — speed + premium.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA with Animation */}
+      <section className={styles.finalCtaBlock} data-animate="fadein">
+        <h2 className={styles.finalCtaText}>
+          Ready to scale your traction? <br />
+          <span className={styles.animatedHighlight}>Book a free strategy call — let’s win together.</span>
+        </h2>
+        <a href="https://calendly.com/viksproduction/20min" className={styles.ctaButtonBig}>Book Now</a>
       </section>
     </main>
   );
