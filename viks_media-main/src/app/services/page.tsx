@@ -1,8 +1,6 @@
-// /src/app/services/page.tsx
-
 'use client';
 
-import ServicesPage from '@/components/Service/ServicePage.module.css';
+import ServicesPage from './ServicesPage';
 
 export default function Services() {
   return <ServicesPage />;
