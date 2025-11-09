@@ -9,6 +9,7 @@ import React, {useState} from 'react';
 import {FaPhoneAlt, FaEnvelope} from 'react-icons/fa';
 // Убедитесь, что файл стилей существует и путь к нему верный
 import styles from './ContactForm.module.css';
+import { COMPANY_PHONE_DISPLAY, COMPANY_EMAIL } from '@/config/companyInfo';
 
 interface FormData {
     firstName: string;
@@ -125,11 +126,11 @@ const ContactForm: React.FC = () => {
                     <div className={styles.contactInfo}>
                         <p className={styles.contactLine}>
                             <FaPhoneAlt className={styles.contactIcon}/>
-                            <span><strong>Call Us:</strong> +1 (954) 774-5305</span>
+                            <span><strong>Call Us:</strong> {COMPANY_PHONE_DISPLAY}</span>
                         </p>
                         <p className={styles.contactLine}>
                             <FaEnvelope className={styles.contactIcon}/>
-                            <span><strong>Write To Us:</strong> info@viksproduction.com</span>
+                            <span><strong>Write To Us:</strong> {COMPANY_EMAIL}</span>
                         </p>
                     </div>
                 </div>
