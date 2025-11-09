@@ -3,7 +3,8 @@ import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
-import styles from './Footer.module.css'; 
+import styles from './Footer.module.css';
+import { COMPANY_PHONE_DISPLAY, COMPANY_PHONE_TEL, COMPANY_LOCATION, COMPANY_EMAIL } from '@/config/companyInfo'; 
 
 
 interface FooterLinkItem {
@@ -52,9 +53,9 @@ const licenceLinks: FooterLinkItem[] = [
 ];
 
 const contactDetails: ContactDetailItem[] = [
-    { id: 'con1', href: 'tel:+19547745305', text: '(954) 774-5305', icon: FiPhone },
-    { id: 'con2', href: 'mailto:info@viksproduction.com', text: 'info@viksproduction.com', icon: FiMail },
-    { id: 'con3', text: 'San Jose, Bay Area, California, US', icon: FiMapPin },
+    { id: 'con1', href: COMPANY_PHONE_TEL, text: COMPANY_PHONE_DISPLAY, icon: FiPhone },
+    { id: 'con2', href: `mailto:${COMPANY_EMAIL}`, text: COMPANY_EMAIL, icon: FiMail },
+    { id: 'con3', text: COMPANY_LOCATION, icon: FiMapPin },
 ];
 
 
