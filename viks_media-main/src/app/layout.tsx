@@ -1,35 +1,33 @@
-// src/app/layout.tsx
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './global.css'; // Импорт глобальных стилей
-import Header from '@/components/common/Header'; // Импорт компонента шапки
-import Footer from '@/components/common/Footer'; // Импорт компонента подвала
+import './global.css';
+import '@/styles/animations.css'; // новые глобальные анимации
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+import PageTransitionProvider from '@/components/PageTransitionProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'VIKS - Your Marketing Partner',
-    description: 'Marketing Partner',
+  title: 'VIKS - Your Marketing Partner',
+  description: 'Marketing Partner',
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
-    return (
-        <html lang="ru">
-        <head>
-        </head>
-        <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="ru">
+      <head />
+      <body className={inter.className}>
+        <PageTransitionProvider>
+          <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow container mx-auto px-4 py-8">
-                {children}
+              {children}
             </main>
             <Footer />
-        </div>
-        </body>
-        </html>
-    );
+          </div>
+        </PageTransitionProvider>
+      </body>
+    </html>
+  );
 }

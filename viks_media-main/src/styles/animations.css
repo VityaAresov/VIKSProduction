@@ -1,0 +1,8 @@
+body::-webkit-scrollbar { width: 0; height: 0; }
+html, body { background: #000; color: #fff; }
+img { animation: mediaFadeIn .6s ease; }
+@keyframes mediaFadeIn { from { opacity: 0; transform: scale(1.01); } to { opacity: 1; transform: scale(1); } }
+.page-opacity-enter { opacity: 0; }
+.page-opacity-enter-active { opacity: 1; transition: opacity 1s; }
+.zoom-out-phase { animation: zoomOutOverlay 1s linear; }
+@keyframes zoomOutOverlay { 0% { transform: scale(10); opacity: 1; } 80% { transform: scale(1); opacity: 1; } 100% { transform: scale(1); opacity: 0; } }

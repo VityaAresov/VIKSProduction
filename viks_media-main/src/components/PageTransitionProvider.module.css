@@ -1,0 +1,15 @@
+.overlay { position: fixed; inset: 0; z-index: 9999; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; font-family: "WhyteInktrap", system-ui, sans-serif; }
+.half { position: absolute; left: 0; right: 0; height: 50%; background: #000; transform: translateY(0); transition: transform .7s cubic-bezier(.77,0,.18,1); }
+.top { top: 0; border-bottom: 1px solid #111; }
+.bottom { bottom: 0; border-top: 1px solid #111; }
+.logoBlock { position: relative; display: flex; flex-direction: column; align-items: center; animation: logoFadeIn .5s ease; }
+@keyframes logoFadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+.logoInner { position: relative; width: 110px; height: 110px; display: grid; place-items: center; margin-bottom: 18px; }
+.logoImg { width: 90px; height: auto; filter: drop-shadow(0 0 12px rgba(255,255,255,0.25)); }
+.logoFallback { position: absolute; font-size: 38px; font-weight: 700; letter-spacing: .05em; color: #fff; }
+.barWrapper { position: relative; width: 320px; max-width: 60vw; height: 8px; background: rgba(255,255,255,0.1); overflow: hidden; border-radius: 4px; }
+.bar { height: 100%; background: #fff; transition: width .4s cubic-bezier(.77,0,.18,1); box-shadow: 0 0 12px 2px #fff; }
+.fadeWrapper { opacity: 0; transition: opacity .6s ease .15s; min-height: 100vh; }
+.fadeWrapper[data-loaded="true"] { opacity: 1; }
+.overlay:has(.bar[style*='width: 100%']) .top { transform: translateY(-100%); }
+.overlay:has(.bar[style*='width: 100%']) .bottom { transform: translateY(100%); }
