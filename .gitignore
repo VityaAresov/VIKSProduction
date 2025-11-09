@@ -1,2 +1,6 @@
 node_modules
 .env
+.next
+viks_media-main/node_modules
+viks_media-main/.next
+next-env.d.ts
