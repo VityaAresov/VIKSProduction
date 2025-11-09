@@ -380,11 +380,7 @@
   transform: scale(1.03);
 }
 
-/* Глобальные стили для анимаций скролла */
-:global([data-animate="fadein"]) {
-  opacity: 0;
-  transform: translateY(44px);
-}
+/* Глобальный селектор удалён — перенесён в global.css */
 
 .fadeIn { 
   opacity: 1 !important; 
