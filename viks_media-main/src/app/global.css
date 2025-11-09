@@ -50,11 +50,11 @@ body {
     min-height: 100vh;
 
     /* Дополнительно можно скрыть overflow на body на всякий случай */
-    /* overflow: hidden; */ /* Может помешать нормальной прокрутке, если wrapper длинный. overflow-x: hidden на html обычно достаточно. */
+    /* overflow: hidden; */ /* Может помешать нормальной прокрутке, если wrapper длинный. overflow-x: hidden на html обычно достаточно.*/
 }
 
 /* === WRAPPER FOR SCALING */
-/*/*#page-wrapper {
+/*#page-wrapper {
     transform: scale(0.9);
     transform-origin: top left; /* or 0 0 */
     /*width: 111.1111%; /* Compensates width for scale(0.9) */
@@ -63,8 +63,7 @@ body {
     /* НЕ ДОБАВЛЯЙТЕ min-height: 100vh СЮДА, это вернет проблему */
 /*} /*/
 /* ============================ */
-
-{
+a {
     color: inherit; /* Наследует цвет от родителя */
     text-decoration: none; /* Убираем подчеркивание по умолчанию */
 }
@@ -127,12 +126,6 @@ body {
 /* === react-responsive-modal ========== */
 /* ====================================== */
 
-/* Стили для модального окна остаются без изменений, но учтите, */
-/* что глобальное масштабирование wrapper'а МОЖЕТ повлиять на */
-/* визуальный размер и позиционирование модального окна. */
-/* Возможно, потребуется контр-масштабирование модалки, если она */
-/* выглядит слишком маленькой (как закомментировано ниже). */
-
 .react-responsive-modal-overlay {
     background: rgba(0, 0, 0, 0.8) !important; /* Сделал чуть темнее */
     padding: 15px !important;
@@ -159,10 +152,6 @@ body {
     position: relative !important;
     text-align: left !important;
     z-index: 1001 !important;
-
-    /* Optional: Counter-scale modal if it appears too small due to wrapper scaling */
-    /* transform: scale(calc(1 / 0.9)); */
-    /* transform-origin: center center; */
 }
 
 .react-responsive-modal-closeButton {
@@ -195,27 +184,20 @@ body {
 }
 
 /* --- Адаптивные стили для модалки --- */
-/* (Глобальные настройки размера/кнопки) */
-
 @media (max-width: 768px) {
-    .react-responsive-modal-modal {
-        margin: 15px auto !important;
-    }
+    .react-responsive-modal-modal { margin: 15px auto !important; }
 }
 
 @media (max-width: 540px) {
-    .react-responsive-modal-closeButton {
-        top: 10px !important;
-        right: 10px !important;
-        padding: 5px !important;
-    }
-    .react-responsive-modal-closeButton svg {
-        height: 16px !important;
-        width: 16px !important;
-    }
-    .react-responsive-modal-modal {
-        margin: 10px auto !important;
-    }
+    .react-responsive-modal-closeButton { top: 10px !important; right: 10px !important; padding: 5px !important; }
+    .react-responsive-modal-closeButton svg { height: 16px !important; width: 16px !important; }
+    .react-responsive-modal-modal { margin: 10px auto !important; }
+}
+
+/* === Scroll Animation Global Selector === */
+[data-animate="fadein"] {
+  opacity: 0;
+  transform: translateY(44px);
 }
 
 /* ====================================== */
