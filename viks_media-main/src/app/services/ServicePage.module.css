@@ -380,11 +380,7 @@
   transform: scale(1.03);
 }
 
-/* Глобальные стили для анимаций скролла */
-:global([data-animate="fadein"]) {
-  opacity: 0;
-  transform: translateY(44px);
-}
+/* Глобальный селектор удалён — перенесён в global.css */
 
 .fadeIn { 
   opacity: 1 !important; 
@@ -394,51 +390,18 @@
 
 /* --- Responsive --- */
 @media (max-width: 1100px) {
-  .heroBlock {
-    flex-direction: column;
-  }
-  
-  .heroContent, .heroVisual {
-    flex: 1 1 100%; 
-    min-width: 0;
-  }
-  
-  .sliderWrap {
-    gap: 24px;
-  }
-  
-  .whyGrid, .packagesWrap, .processSteps {
-    gap: 20px;
-  }
-  
-  .finalCtaText {
-    font-size: clamp(20px, 4vw, 32px);
-  }
+  .heroBlock { flex-direction: column; }
+  .heroContent, .heroVisual { flex: 1 1 100%; min-width: 0; }
+  .sliderWrap { gap: 24px; }
+  .whyGrid, .packagesWrap, .processSteps { gap: 20px; }
+  .finalCtaText { font-size: clamp(20px, 4vw, 32px); }
 }
 
 @media (max-width: 650px) {
-  .pageContainer {
-    padding: 0;
-  }
-  
-  .servicesSection, .processSection, .whySection, .sliderSection, .finalCtaBlock {
-    padding: 36px 4vw;
-  }
-  
-  .heading1, .heading2, .heading3 { 
-    font-size: 7vw;
-  }
-  
-  .finalCtaBlock {
-    padding: 55px 2vw 68px;
-  }
-  
-  .ctaButtonBig {
-    font-size: 15px; 
-    padding: 15px 25px;
-  }
-  
-  .sliderCard, .packageCard, .whyGrid > div, .stepCard {
-    padding: 15px;
-  }
+  .pageContainer { padding: 0; }
+  .servicesSection, .processSection, .whySection, .sliderSection, .finalCtaBlock { padding: 36px 4vw; }
+  .heading1, .heading2, .heading3 { font-size: 7vw; }
+  .finalCtaBlock { padding: 55px 2vw 68px; }
+  .ctaButtonBig { font-size: 15px; padding: 15px 25px; }
+  .sliderCard, .packageCard, .whyGrid > div, .stepCard { padding: 15px; }
 }
