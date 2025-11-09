@@ -43,7 +43,7 @@ export default function PageTransitionProvider({ children }: { children: React.R
           <div className={styles.half + " " + styles.top} />
           <div className={styles.logoBlock}>
             <div className={styles.logoInner}>
-              <img src="/logo.svg" alt="Logo" className={styles.logoImg} onError={(e) => (e.currentTarget.style.display = "none")} />
+              <img src="/logo.png" alt="Logo" className={styles.logoImg} onError={(e) => (e.currentTarget.style.display = "none")} />
               <span className={styles.logoFallback}>VIKS</span>
             </div>
             <div className={styles.barWrapper}>
