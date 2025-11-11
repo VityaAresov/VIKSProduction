@@ -1,15 +1,16 @@
 /* ServicesSection.module.css */
 
 .servicesSection {
-    width: 100%; 
-    max-width: 1440px; 
-    min-height: 716px; 
-    margin: 0 auto; 
-    padding: 70px 80px 100px 80px; 
-    position: relative; 
+    width: 100%;
+    max-width: 1440px;
+    min-height: 716px;
+    margin: 0 auto;
+    padding: 70px 80px 100px 80px;
+    position: relative;
     box-sizing: border-box;
-    overflow: hidden; 
-    font-family: 'Open Sans', sans-serif; 
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
 }
 
 .topTextContainer {
