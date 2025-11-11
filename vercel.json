@@ -1,7 +1,6 @@
 {
-  "buildCommand": "cd viks_media-main && npm run build",
-  "devCommand": "cd viks_media-main && npm run dev",
-  "installCommand": "cd viks_media-main && npm install",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": "viks_media-main/.next"
+  "outputDirectory": ".next"
 }
