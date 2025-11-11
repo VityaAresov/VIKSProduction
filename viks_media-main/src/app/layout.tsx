@@ -4,7 +4,6 @@ import './global.css';
 import '@/styles/animations.css'; // новые глобальные анимации
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
-import PageTransitionProvider from '@/components/PageTransitionProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,15 +17,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru">
       <head />
       <body className={inter.className}>
-        <PageTransitionProvider>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow container mx-auto px-4 py-8">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </PageTransitionProvider>
+        <div className="flex flex-col min-h-screen bg-white">
+          <Header />
+          <main className="flex-grow w-full bg-white">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
